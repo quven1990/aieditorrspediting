@@ -4,7 +4,7 @@ import { SITE_YEAR } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="mt-16 border-t border-black/5 bg-surface">
-      <div className="mx-auto max-w-3xl px-4 py-10 text-sm text-muted">
+      <div className="mx-auto max-w-5xl px-4 py-10 text-sm text-muted">
         <p className="mb-4 leading-relaxed">
           Unofficial English resource hub. Not affiliated with RSP Editing, CapCut, VN,
           Adobe, ByteDance, or any creator brand. We do not host template files, APKs, or

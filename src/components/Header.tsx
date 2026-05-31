@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const nav = [
@@ -9,9 +10,11 @@ const nav = [
 export function Header() {
   return (
     <header className="border-b border-black/5 bg-card/80 backdrop-blur-sm sticky top-0 z-50">
-      <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-4">
-        <Link href="/" className="font-display text-lg font-semibold text-ink tracking-tight">
-          AI Editor RSP Editing
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
+        <Link href="/" className="flex items-center gap-2.5 font-display text-lg font-semibold text-ink tracking-tight">
+          <Image src="/icon.svg" alt="" width={28} height={28} className="rounded-md" />
+          <span className="hidden sm:inline">AI Editor RSP Editing</span>
+          <span className="sm:hidden">RSP Editing</span>
         </Link>
         <nav className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1 text-sm text-muted">
           {nav.map((item) => (
