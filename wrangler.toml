@@ -1,5 +1,10 @@
-# Static Next.js export → Cloudflare Pages (NOT OpenNext / Workers SSR).
-# Build locally/CI with: npm run build  →  publishes ./out
+# Static Next.js export → folder ./out (NOT OpenNext / Workers SSR).
+# Build: npm run build
+# Deploy (Pages): npm run deploy
 name = "aieditorrspediting"
 compatibility_date = "2024-12-01"
 pages_build_output_dir = "out"
+
+# Required when CI runs `npx wrangler deploy` (static assets only)
+[assets]
+directory = "./out"

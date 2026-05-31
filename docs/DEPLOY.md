@@ -14,7 +14,15 @@ In **Workers & Pages** → your project → **Settings** → **Build**:
 | **Framework preset** | `None` (recommended) or **Next.js (Static HTML Export)** |
 | **Build command** | `npm run build` |
 | **Build output directory** | `out` |
-| **Deploy command** | **leave empty / delete** |
+| **Deploy command** | **leave empty** (best) **or** `npm run deploy` |
+
+**Do not use** `npx wrangler deploy` alone — it fails on Pages projects. If your dashboard forces a deploy command, set:
+
+```bash
+npm run deploy
+```
+
+(which runs `wrangler pages deploy out`).
 
 ### If you see this error
 
@@ -23,17 +31,20 @@ ENOENT: .../.next/standalone/.next/server/pages-manifest.json
 npx opennextjs-cloudflare build
 ```
 
-Cause: Cloudflare ran **Workers + OpenNext** (`npx wrangler deploy` auto-migrate), but this repo only produces static files in `out/`.
+Cause: **Deploy command** is `npx wrangler deploy`, which is for Workers SSR — not this static `out/` site.
 
-**Fix:**
+**Fix (pick one):**
 
-1. Remove **Deploy command** (`npx wrangler deploy`) — Pages should publish `out` automatically after build.
-2. Set **Build output directory** to `out` (not `.next`).
-3. Redeploy.
+1. **Recommended:** Delete **Deploy command** entirely; set **Build output directory** = `out`; redeploy.
+2. **If deploy command is required:** set it to `npm run deploy` (not `npx wrangler deploy`).
+3. Set **Build output directory** to `out` (not `.next`).
 
-Optional: repo includes `wrangler.toml` with `pages_build_output_dir = "out"` for static Pages.
+### If you see `Missing entry-point to Worker script or to assets directory`
+
+Wrangler was run without static assets config. Use **Deploy command** = `npm run deploy`, or delete deploy command and use output dir `out` only.
 
 ---
+
 
 ## Step-by-step
 
