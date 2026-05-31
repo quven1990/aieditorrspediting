@@ -1,7 +1,8 @@
 import Script from "next/script";
-import { GA_ID } from "@/lib/site";
 
-/** Google tag (gtag.js) — GA4 */
+const GA_ID = "G-0NQNJQ2R84";
+
+/** Google tag (gtag.js) */
 export function Analytics() {
   return (
     <>
