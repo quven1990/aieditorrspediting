@@ -67,7 +67,8 @@ Wrangler was run without static assets config. Use **Deploy command** = `npm run
 
 1. Property: `https://aieditorrspediting.xyz`
 2. Verify (DNS TXT in Cloudflare is easiest).
-3. Submit sitemap: `https://aieditorrspediting.xyz/sitemap.xml`
+3. Submit sitemap: `sitemap.xml`（资源请用 **https://aieditorrspediting.xyz**，不要用 www）  
+   详见 [SEO-GSC.md](./SEO-GSC.md) 若抓取失败。
 
 ## GA4
 

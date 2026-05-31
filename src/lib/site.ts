@@ -1,5 +1,7 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://aieditorrspediting.xyz";
+/** Canonical origin, no trailing slash (used in sitemap + robots) */
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://aieditorrspediting.xyz"
+).replace(/\/$/, "");
 
 export const SITE_NAME = "AI Editor RSP Editing";
 
