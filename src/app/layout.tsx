@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
+import { Plausible } from "@/components/Plausible";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
@@ -43,6 +44,7 @@ export default function RootLayout({
     >
       <head>
         <Analytics />
+        <Plausible />
       </head>
       <body className="font-sans min-h-screen flex flex-col" suppressHydrationWarning>
         <Header />
