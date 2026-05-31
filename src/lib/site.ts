@@ -10,3 +10,10 @@ export const SITE_DESCRIPTION =
 
 /** Fixed year avoids SSR/client timezone mismatch in footer */
 export const SITE_YEAR = 2026;
+
+/** Site operator (legal pages) */
+export const SITE_OPERATOR = "aieditorrspediting.xyz";
+
+export const CONTACT_EMAIL = "contract@aieditorrspediting.xyz";
+
+export const PRIVACY_EMAIL = "privacy@aieditorrspediting.xyz";

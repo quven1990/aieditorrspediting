@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ContactEmailsFooter } from "@/components/ContactEmail";
 import { SITE_YEAR } from "@/lib/site";
 
 export function Footer() {
@@ -21,7 +22,8 @@ export function Footer() {
             Safe Use
           </Link>
         </div>
-        <p className="mt-6 text-xs">© {SITE_YEAR} aieditorrspediting.xyz</p>
+        <ContactEmailsFooter />
+        <p className="mt-4 text-xs">© {SITE_YEAR} aieditorrspediting.xyz</p>
       </div>
     </footer>
   );

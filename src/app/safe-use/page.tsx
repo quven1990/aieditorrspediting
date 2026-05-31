@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ContactEmail } from "@/components/ContactEmail";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -55,6 +56,17 @@ export default function SafeUsePage() {
       <p>
         You are responsible for how you use prompts from this site. We provide educational
         text only—not legal advice.
+      </p>
+
+      <h2>Questions</h2>
+      <h3 className="!mt-2 text-base font-semibold text-ink">Contact us</h3>
+      <p>
+        Report a safety concern or ask about these guidelines: <ContactEmail email="contact" />.
+        For privacy-specific requests, use <ContactEmail email="privacy" /> (see{" "}
+        <a href="/privacy/" className="text-accent underline">
+          Privacy Policy
+        </a>
+        ).
       </p>
     </div>
   );
