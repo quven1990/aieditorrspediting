@@ -9,7 +9,16 @@
 | `https://www.aieditorrspediting.xyz/sitemap.xml` | **530** | www 未接入 Pages，不要用 www 资源 |
 | `https://aieditorrspediting.xyz/sitemap.xml/` | **404** | 不要带尾部斜杠 |
 
-**结论：** robots.txt **没有**禁止抓取 sitemap；GSC 报错多半是 **提交的地址不对**、**曾部署失败**，或 **www 未配置**。
+**结论：** robots.txt **没有**禁止 Google 抓取；浏览器能打开 sitemap 但 GSC 显示「无法读取」时，常见原因是 **首次提交时部署失败（错误被缓存）**、**GSC 资源类型不对**、**Cloudflare 拦截 Googlebot**，或 **www 域名 530**。
+
+### GSC 显示「无法读取」但 URL 浏览器能打开
+
+1. 在 GSC → **站点地图** → 删除旧的 `sitemap.xml` 条目  
+2. 等 Cloudflare **最新部署成功**（含 `public/sitemap.xml` 静态文件）  
+3. 重新提交：`sitemap.xml`（不要带 `www`，不要尾部 `/`）  
+4. 用 **网址检查** 测试首页是否「可编入索引」  
+5. Cloudflare → **Security** → **Bots**：关闭 Bot Fight Mode，或开启 **Allow verified bots**（允许 Googlebot）  
+6. 确认 GSC 资源为 **网址前缀** `https://aieditorrspediting.xyz`（与 sitemap 里域名一致）
 
 ---
 
