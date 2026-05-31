@@ -1,0 +1,5 @@
+# Static Next.js export → Cloudflare Pages (NOT OpenNext / Workers SSR).
+# Build locally/CI with: npm run build  →  publishes ./out
+name = "aieditorrspediting"
+compatibility_date = "2024-12-01"
+pages_build_output_dir = "out"

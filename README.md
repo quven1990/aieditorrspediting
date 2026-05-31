@@ -19,7 +19,8 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run build
 ```
 
-Output: `out/` — deploy this folder to Cloudflare Pages.
+Output: `out/` — deploy this folder to **Cloudflare Pages** (static).  
+Do not use `npx wrangler deploy` / OpenNext — see [docs/DEPLOY.md](docs/DEPLOY.md).
 
 ## Environment
 
