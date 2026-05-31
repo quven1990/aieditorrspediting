@@ -41,11 +41,13 @@ export default function RootLayout({
       className={`${dmSans.variable} ${fraunces.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <Analytics />
+      </head>
       <body className="font-sans min-h-screen flex flex-col" suppressHydrationWarning>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <Analytics />
       </body>
     </html>
   );

@@ -1,16 +1,16 @@
 import Script from "next/script";
 import { GA_ID } from "@/lib/site";
 
+/** Google tag (gtag.js) — GA4 */
 export function Analytics() {
-  if (!GA_ID) return null;
-
   return (
     <>
       <Script
+        async
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
       />
-      <Script id="ga4" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
