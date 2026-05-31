@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
+import { AdSense } from "@/components/AdSense";
 import { Analytics } from "@/components/Analytics";
 import { Clarity } from "@/components/Clarity";
 import { Plausible } from "@/components/Plausible";
@@ -63,6 +64,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <AdSense />
         <Analytics />
         <Plausible />
         <Clarity />

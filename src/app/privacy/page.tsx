@@ -39,6 +39,11 @@ export default function PrivacyPage() {
           data to improve usability (see Microsoft’s privacy documentation).
         </li>
         <li>
+          <strong>Google AdSense:</strong> Advertising cookies and similar technologies may be used
+          to show and measure ads (publisher ID on this site). See Google’s ads policies and your ad
+          settings at google.com/settings/ads.
+        </li>
+        <li>
           <strong>Server logs:</strong> Our host Cloudflare may log IP address, user agent, and
           request time for security and performance.
         </li>
