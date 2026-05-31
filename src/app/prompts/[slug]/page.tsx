@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CopyBlock } from "@/components/CopyBlock";
 import { getPromptBySlug, getPromptSlugs } from "@/lib/prompts";
-import { pageMetadata } from "@/lib/seo";
+import { metaTitle, pageMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return {};
   return {
     ...pageMetadata({
-      title: article.title,
+      title: metaTitle(article.title),
       description: `${article.description} ${article.answer}`,
       path: `/prompts/${slug}/`,
     }),

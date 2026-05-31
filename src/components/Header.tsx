@@ -12,7 +12,13 @@ export function Header() {
     <header className="border-b border-black/5 bg-card/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
         <Link href="/" className="flex items-center gap-2.5 font-display text-lg font-semibold text-ink tracking-tight">
-          <Image src="/icon.svg" alt="" width={28} height={28} className="rounded-md" />
+          <Image
+            src="/icon.svg"
+            alt="AI Editor RSP Editing logo"
+            width={28}
+            height={28}
+            className="rounded-md"
+          />
           <span className="hidden sm:inline">AI Editor RSP Editing</span>
           <span className="sm:hidden">RSP Editing</span>
         </Link>

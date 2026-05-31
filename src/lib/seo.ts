@@ -10,6 +10,23 @@ export function canonicalUrl(path = "/"): string {
 const META_PAD =
   " Unofficial English RSP editing hub—copy AI photo prompts safely with no template file downloads.";
 
+const TITLE_PAD = " — RSP AI Photo Prompt Guides";
+
+/** Target 40–60 characters for meta titles */
+export function metaTitle(primary: string): string {
+  let text = primary.replace(/\s+/g, " ").trim();
+  if (text.length >= 40 && text.length <= 60) return text;
+  if (text.length < 40) {
+    const combined = `${text}${TITLE_PAD}`;
+    if (combined.length <= 60) return combined;
+    return combined.slice(0, 60).trimEnd();
+  }
+  if (text.length > 60) {
+    return `${text.slice(0, 57).trimEnd()}...`;
+  }
+  return text;
+}
+
 /** Target 140–160 characters for meta descriptions */
 export function metaDescription(primary: string): string {
   let text = primary.replace(/\s+/g, " ").trim();
@@ -34,13 +51,16 @@ export function pageMetadata({
   description: string;
   path: string;
 }) {
+  const seoTitle = metaTitle(title);
+  const seoDescription = metaDescription(description);
+
   return {
-    title,
-    description: metaDescription(description),
+    title: seoTitle,
+    description: seoDescription,
     alternates: { canonical: canonicalUrl(path) },
     openGraph: {
-      title,
-      description: metaDescription(description),
+      title: seoTitle,
+      description: seoDescription,
       url: canonicalUrl(path),
     },
   };

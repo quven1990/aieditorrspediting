@@ -21,7 +21,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Prompts & Safer Workflows`,
+    default: "AI Editor RSP Editing Prompts — Copy & Paste Guides",
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,

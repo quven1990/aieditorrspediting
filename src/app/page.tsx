@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 import { SITE_DESCRIPTION, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "AI Editor RSP Editing Prompts",
+  title: "AI Editor RSP Editing Prompts — Copy & Paste Guides",
   description: SITE_DESCRIPTION,
   path: "/",
 });
