@@ -1,15 +1,16 @@
-import Script from "next/script";
-
 const ADSENSE_CLIENT = "ca-pub-9101692675645964";
 
-/** Google AdSense loader (auto ads) */
+/**
+ * Literal <script> in <head> so static export HTML includes the tag for AdSense verification.
+ * (next/script afterInteractive only emitted preload in view-source.)
+ */
 export function AdSense() {
   return (
-    <Script
+    <script
       async
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
       crossOrigin="anonymous"
-      strategy="afterInteractive"
+      suppressHydrationWarning
     />
   );
 }
