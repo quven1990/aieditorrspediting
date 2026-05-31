@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const nav = [
+  { href: "/generator/", label: "Generator" },
   { href: "/prompts/", label: "Prompts" },
-  { href: "/what-is-rsp-editing/", label: "What is RSP?" },
+  { href: "/prompts/rsp-editing-capcut-workflow/", label: "CapCut" },
+  { href: "/prompts/rsp-editing-lightroom-style-settings/", label: "Color" },
   { href: "/safe-use/", label: "Safe Use" },
 ];
 

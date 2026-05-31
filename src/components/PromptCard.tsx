@@ -7,8 +7,13 @@ export function PromptCard({ article }: { article: PromptArticle }) {
       href={`/prompts/${article.slug}/`}
       className="block rounded-xl border border-black/6 bg-card p-5 shadow-sm hover:border-accent/30 hover:shadow-md transition-all"
     >
-      <span className="text-xs font-medium text-accent">{article.category}</span>
+      <span className="text-xs font-medium text-accent">
+        {article.audienceTag ?? article.category}
+      </span>
       <h2 className="mt-1 font-display text-lg font-semibold text-ink">{article.title}</h2>
+      {article.bestFor && (
+        <p className="mt-1 text-xs text-muted">Best for: {article.bestFor}</p>
+      )}
       <p className="mt-2 text-sm text-muted line-clamp-2">{article.description}</p>
     </Link>
   );

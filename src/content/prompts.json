@@ -81,6 +81,8 @@
     "answer": "For rsp-style portraits, lock likeness first: one face, one light direction, one background idea. Add style words only after the base render looks like you.",
     "primaryKeyword": "rsp editing ai portrait",
     "category": "Portrait",
+    "bestFor": "Professional headshot, 4:5 feed",
+    "audienceTag": "General",
     "prompt": "Professional headshot, soft key light from left, subtle fill, natural skin tones, sharp eyes, shallow depth of field, neutral background, photorealistic, 4:5",
     "variables": ["skin tone fidelity: match reference photo", "hair: keep original style", "background: soft gray gradient"],
     "negativePrompt": "age change, ethnicity change, heavy makeup unless requested, blur, noise, watermark",
@@ -116,6 +118,8 @@
     "answer": "Couple rsp edits fail when lighting does not match between subjects. Generate or compose one shared light direction and similar color grade on both faces.",
     "primaryKeyword": "rsp editing ai couple",
     "category": "Couple",
+    "bestFor": "Couple feed post, matching grade",
+    "audienceTag": "Couple",
     "prompt": "Couple portrait, matching warm cinematic grade, soft backlight, natural smiles, coordinated outfits, outdoor golden hour, photorealistic, gentle film grain, 4:5",
     "variables": ["pose: walking together | seated close", "season: spring blossoms | urban night"],
     "negativePrompt": "merged faces, mismatched shadows, extra limbs, text hearts watermark",
@@ -151,6 +155,8 @@
     "answer": "Holi-style rsp trends need controlled color on skin and clothing—prompt color powder as soft particles, not face replacement. Keep likeness and avoid cultural misuse in captions.",
     "primaryKeyword": "rsp editing holi",
     "category": "Trend",
+    "bestFor": "Holi festival post, colorful DP",
+    "audienceTag": "Festival",
     "prompt": "Portrait with soft Holi color powder in air, pink and yellow pigments, natural skin visible, joyful expression, daylight, photorealistic, high detail, respectful festive mood",
     "variables": ["pigment intensity: light dust | medium splash", "background: outdoor courtyard"],
     "negativePrompt": "face paint mask, clown makeup, cultural stereotypes, logos, text",
@@ -357,6 +363,192 @@
       "Switching apps every render instead of tuning prompts.",
       "Believing marketing pages that promise “official RSP”.",
       "Ignoring export resolution limits on free tiers."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "cinematic-street-portrait-boy",
+    "title": "Cinematic Street Portrait Boy (RSP Prompt)",
+    "description": "Neon street-night portrait prompt for attitude DP and Instagram-ready boy edits—copy-paste with safety notes.",
+    "answer": "Street-night boy portraits work when you lock one light direction (rim + soft fill), keep skin texture, and avoid stacking five trend keywords at once.",
+    "primaryKeyword": "rsp editing boy portrait",
+    "category": "Portrait",
+    "bestFor": "Instagram DP, attitude portrait, street look",
+    "audienceTag": "Boy",
+    "prompt": "Cinematic portrait of a young man on a neon-lit city street at night, black jacket, confident relaxed pose, soft rain reflections on pavement, shallow depth of field, subtle rim light, realistic skin texture, photorealistic social media photo, 4:5 aspect ratio",
+    "variables": ["jacket color: black | navy | leather", "background: rainy street | alley neon | rooftop skyline", "lighting accent: cyan | magenta | warm amber"],
+    "negativePrompt": "plastic skin, extra fingers, blurry eyes, logo, watermark, cartoon unless intended, celebrity likeness",
+    "tools": ["ChatGPT image, Gemini image, Midjourney, or your phone AI editor", "Lightroom mobile for final contrast"],
+    "steps": [
+      "Start from a clear reference if you need likeness—one person, even lighting.",
+      "Paste the base prompt; change only one variable line per render batch.",
+      "Reject variants with waxy skin or melted hands before color grading.",
+      "Lift shadows slightly; keep clarity low on faces.",
+      "Export 4:5 for feed or crop tighter for WhatsApp DP.",
+      "Do not use celebrity names or brand logos in prompts."
+    ],
+    "faq": [
+      {
+        "q": "Can I use this for WhatsApp DP?",
+        "a": "Yes—crop tighter on the face after export instead of re-prompting with duplicate style words."
+      },
+      {
+        "q": "Why does the street look fake?",
+        "a": "Reduce neon saturation in post and keep one dominant accent color instead of rainbow lighting."
+      }
+    ],
+    "commonMistakes": [
+      "Stacking bike, rain, and neon in one prompt on the first try.",
+      "Using trademarked sport bike or logo descriptions.",
+      "Publishing edits of someone who did not consent."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "aesthetic-floral-girl-portrait",
+    "title": "Aesthetic Floral Girl Portrait (RSP Prompt)",
+    "description": "Soft pastel floral portrait prompt for aesthetic profile photos and creator-style girl edits.",
+    "answer": "Floral girl aesthetics need gentle light, pastel wardrobe contrast, and restrained background blur—over-saturating pinks kills skin realism.",
+    "primaryKeyword": "rsp editing girl portrait",
+    "category": "Portrait",
+    "bestFor": "Aesthetic profile photo, soft portrait",
+    "audienceTag": "Girl",
+    "prompt": "Aesthetic portrait of a young woman in a pastel outfit near soft flowers, warm sunlight, dreamy background blur, natural smile, cinematic color grading, detailed hair, realistic face, elegant social media photo edit, 4:5",
+    "variables": ["outfit color: lavender | mint | cream", "flower type: roses | wildflowers | cherry blossom", "time of day: golden hour | soft overcast"],
+    "negativePrompt": "heavy beauty filter, plastic skin, extra limbs, logo, watermark, age change",
+    "tools": ["AI image app with optional reference upload", "Snapseed or Lightroom for HSL tweaks"],
+    "steps": [
+      "Pick one pastel accent for outfit and flowers—not every hue at once.",
+      "Generate 3–4 variants; choose natural pores over porcelain skin.",
+      "Soften background saturation if flowers compete with the face.",
+      "Crop to 4:5 with eyes on the upper third line.",
+      "Use licensed or personal references only when uploading elsewhere."
+    ],
+    "faq": [
+      {
+        "q": "How do I personalize the look?",
+        "a": "Swap outfit color, flower type, and time-of-day variables before adding new style adjectives."
+      },
+      {
+        "q": "Can I combine with Holi color prompts?",
+        "a": "Yes, but run festival powder as a separate pass—do not mix heavy pigment keywords on the first render."
+      }
+    ],
+    "commonMistakes": [
+      "Neon pink defaults that clip skin channels on mobile.",
+      "Copying influencer poses with their exact outfits and backgrounds.",
+      "Double compression after AI export and platform upload."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "romantic-rain-couple-rsp",
+    "title": "Romantic Rain Couple Portrait (RSP Prompt)",
+    "description": "Rainy couple prompt with shared umbrella lighting—matched grade for romantic reels and couple DPs.",
+    "answer": "Rain couple edits need one shared light source and matching color grade on both faces; mismatched shadows are the usual failure mode.",
+    "primaryKeyword": "rsp editing romantic couple",
+    "category": "Couple",
+    "bestFor": "Couple photo, romantic reel cover",
+    "audienceTag": "Couple",
+    "prompt": "Romantic couple portrait in gentle rain, two people close under a clear umbrella, warm street lights, cinematic reflections on wet ground, soft bokeh, natural expressions, photorealistic, high detail, 4:5 social composition",
+    "variables": ["outfits: coordinated neutrals | complementary pastels", "umbrella: clear | classic black", "city vs park background"],
+    "negativePrompt": "merged faces, extra limbs, mismatched shadows, logo, text watermark, celebrity couple likeness",
+    "tools": ["AI couple or portrait mode if available", "CapCut for slideshow export with licensed music"],
+    "steps": [
+      "Use one photo with both faces visible and similar exposure when possible.",
+      "Prompt shared rain lighting—not two different style packs.",
+      "Check hands, umbrella edges, and hair at 100% zoom.",
+      "Match skin warmth on both subjects in post if tools allow local edits.",
+      "Post only with consent from everyone pictured."
+    ],
+    "faq": [
+      {
+        "q": "Clear umbrella or black?",
+        "a": "Clear umbrellas show faces better for AI; black reads moodier but needs stronger rim light in the prompt."
+      },
+      {
+        "q": "Still vs reel?",
+        "a": "Export a sharp still first; animate 2–3 cuts in CapCut using our workflow page—avoid unknown project imports."
+      }
+    ],
+    "commonMistakes": [
+      "Combining two solo AI portraits with different white balance.",
+      "Using ripped romantic songs outside platform libraries.",
+      "Covering faces with large caption blocks on reels."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "attitude-bike-dp-portrait",
+    "title": "Attitude Bike DP Portrait (RSP Prompt)",
+    "description": "Sunset bike-side attitude DP prompt—generic bike wording without brand logos or risky downloads.",
+    "answer": "Bike DP prompts should describe generic sport or street bikes and sunset grade—not trademarked models or logo plates.",
+    "primaryKeyword": "rsp editing bike dp",
+    "category": "Portrait",
+    "bestFor": "WhatsApp DP, bike attitude edit",
+    "audienceTag": "Boy",
+    "prompt": "Attitude DP portrait of a young man beside a generic sport motorcycle on an empty road at sunset, black outfit, cinematic orange sky, dramatic shadows, realistic face, sharp details, professional social media edit, square or 4:5 crop",
+    "variables": ["bike style: sport | cafe racer silhouette (no brand names)", "road: highway | desert pull-off", "sunset tone: orange | purple-blue"],
+    "negativePrompt": "brand logos, license plates with text, celebrity likeness, deformed wheels, extra fingers",
+    "tools": ["AI generate with reference for likeness", "Lightroom for orange/teal separation in sky only"],
+    "steps": [
+      "Describe bike generically—never prompt real manufacturer names or logos.",
+      "Place subject and bike in one light direction; check wheel geometry.",
+      "Grade sky separately from skin to avoid orange skin casts.",
+      "Crop square for DP apps or 4:5 for feed.",
+      "Disclose AI imagery if your platform requires it."
+    ],
+    "faq": [
+      {
+        "q": "Can I use a photo of my real bike?",
+        "a": "Yes as reference if you own the photo rights; still avoid prompting visible brand logos in text."
+      },
+      {
+        "q": "Why do wheels look bent?",
+        "a": "Regenerate with fewer adjectives or inpaint wheels; AI often fails on circular spokes at low res."
+      }
+    ],
+    "commonMistakes": [
+      "Prompting trademarked motorcycle brands.",
+      "Low-resolution exports that mush wheel spokes.",
+      "Using someone else’s bike photo without permission."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "cinematic-selfie-upgrade",
+    "title": "Cinematic Selfie Upgrade (RSP Prompt)",
+    "description": "Turn a simple selfie into a cinematic RSP-style portrait—image-to-image friendly with privacy notes.",
+    "answer": "Selfie upgrades work best with one reference, mild film grain, and restrained skin smoothing—heavy style words erase likeness.",
+    "primaryKeyword": "rsp editing selfie prompt",
+    "category": "Portrait",
+    "bestFor": "Everyday selfie to viral portrait",
+    "audienceTag": "General",
+    "prompt": "Upgrade a smartphone selfie into a cinematic portrait, realistic skin texture, soft background blur, warm key light, subtle film grain, clean facial details, stylish outfit enhancement, natural expression, high-resolution social composition, 4:5",
+    "variables": ["lighting: window light | golden hour | soft studio", "background: cafe blur | city bokeh | neutral wall", "mood: calm | confident"],
+    "negativePrompt": "age change, ethnicity change, heavy makeup unless requested, blur, noise, watermark",
+    "tools": ["Image-to-image or reference mode in your AI app", "Lightroom mobile for exposure only"],
+    "steps": [
+      "Upload a well-lit selfie facing the camera—avoid heavy beauty filters on source.",
+      "Enable reference or likeness mode when available.",
+      "Reject variants that change bone structure or age.",
+      "Add grain sparingly; keep texture +5 max in post.",
+      "Do not upload sensitive photos to untrusted tools or public bots."
+    ],
+    "faq": [
+      {
+        "q": "Which apps support reference selfies?",
+        "a": "Many mobile AI editors do—check privacy policy before uploading government IDs or minors’ photos."
+      },
+      {
+        "q": "Still looks like a filter?",
+        "a": "Lower style adjectives and fix white balance before adding grain or teal shadows."
+      }
+    ],
+    "commonMistakes": [
+      "Using group chat crops with partial faces.",
+      "Chasing porcelain skin keywords.",
+      "Sharing private reference selfies publicly."
     ],
     "updated": "2026-05-31"
   }

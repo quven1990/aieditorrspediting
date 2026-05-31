@@ -11,15 +11,30 @@ export function Footer() {
           Adobe, ByteDance, or any creator brand. We do not host template files, APKs, or
           mod links.
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-x-4 gap-y-2">
+          <Link href="/generator/" className="hover:text-accent">
+            Generator
+          </Link>
+          <Link href="/prompts/" className="hover:text-accent">
+            Prompts
+          </Link>
+          <Link href="/what-is-rsp-editing/" className="hover:text-accent">
+            What is RSP?
+          </Link>
+          <Link href="/prompts/rsp-editing-capcut-workflow/" className="hover:text-accent">
+            CapCut recipes
+          </Link>
+          <Link href="/prompts/rsp-editing-lightroom-style-settings/" className="hover:text-accent">
+            Color recipes
+          </Link>
+          <Link href="/safe-use/" className="hover:text-accent">
+            Safe Use
+          </Link>
           <Link href="/privacy/" className="hover:text-accent">
             Privacy
           </Link>
           <Link href="/terms/" className="hover:text-accent">
             Terms
-          </Link>
-          <Link href="/safe-use/" className="hover:text-accent">
-            Safe Use
           </Link>
         </div>
         <ContactEmailsFooter />

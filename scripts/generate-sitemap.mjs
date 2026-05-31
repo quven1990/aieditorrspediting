@@ -15,6 +15,7 @@ const prompts = JSON.parse(
 
 const staticPaths = [
   "/",
+  "/generator/",
   "/prompts/",
   "/what-is-rsp-editing/",
   "/safe-use/",
@@ -25,7 +26,7 @@ const staticPaths = [
 const urls = [
   ...staticPaths.map((path) => ({
     loc: `${SITE_URL}${path === "/" ? "/" : path}`,
-    priority: path === "/" ? "1.0" : "0.8",
+    priority: path === "/" ? "1.0" : path === "/generator/" ? "0.9" : "0.8",
   })),
   ...prompts.map((p) => ({
     loc: `${SITE_URL}/prompts/${p.slug}/`,
