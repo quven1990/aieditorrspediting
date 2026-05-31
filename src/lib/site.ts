@@ -6,7 +6,7 @@ export const SITE_URL = (
 export const SITE_NAME = "AI Editor RSP Editing";
 
 export const SITE_DESCRIPTION =
-  "Unofficial English hub for RSP-style AI photo prompts, template recipes, and safer mobile editing workflows.";
+  "Copy RSP-style AI photo prompts and mobile edit recipes in English. Unofficial ai editor rsp editing guides with safe workflows—no APK or template downloads.";
 
 /** Fixed year avoids SSR/client timezone mismatch in footer */
 export const SITE_YEAR = 2026;

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getPromptBySlug } from "@/lib/prompts";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "What Is RSP Editing?",
   description:
-    "Plain-English explainer for rsp editing ai: trends, tools, and why it is not one official app.",
-};
+    "What is rsp editing ai? Learn how RSP-style trends, AI portrait prompts, CapCut edits, and Lightroom color fit together—plus why there is no single official RSP app.",
+  path: "/what-is-rsp-editing/",
+});
 
 export default function WhatIsRspEditingPage() {
   const article = getPromptBySlug("what-is-rsp-editing-ai");
@@ -22,6 +24,7 @@ export default function WhatIsRspEditingPage() {
         “the official RSP editor.”
       </p>
       <h2>What people actually search for</h2>
+      <h3 className="!mt-2 text-base font-semibold text-ink">Top keywords explained</h3>
       <ul>
         <li>
           <strong>ai editor rsp editing</strong> — informational: prompt cards and workflows
@@ -34,6 +37,7 @@ export default function WhatIsRspEditingPage() {
         </li>
       </ul>
       <h2>What this site provides</h2>
+      <h3 className="!mt-2 text-base font-semibold text-ink">How we help creators</h3>
       <p>
         aieditorrspediting.xyz is an independent English hub. We publish copy-paste prompts,
         manual color recipes, and safety notes. We do not host CapCut project files, APKs, or

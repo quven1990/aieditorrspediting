@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { PromptCard } from "@/components/PromptCard";
 import { getAllPrompts } from "@/lib/prompts";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "RSP Editing AI Prompts",
   description:
-    "Browse copy-paste RSP-style AI photo prompts, color recipes, and mobile workflows in English.",
-};
+    "Browse 10+ English RSP-style AI photo prompt guides: portraits, couples, Holi trends, CapCut workflows, and Lightroom-style color—copy and paste, no downloads.",
+  path: "/prompts/",
+});
 
 export default function PromptsIndexPage() {
   const prompts = getAllPrompts();
@@ -18,7 +20,12 @@ export default function PromptsIndexPage() {
         {prompts.length} English guides for rsp editing ai, portraits, couples, color, and
         CapCut-style workflows. Copy prompts into your own apps—no downloads required.
       </p>
-      <div className="mt-10 grid gap-4 sm:grid-cols-2">
+      <h2 className="mt-10 font-display text-xl font-semibold text-ink">Prompt library</h2>
+      <h3 className="mt-2 text-base font-semibold text-ink">Browse by topic</h3>
+      <p className="mt-1 text-sm text-muted mb-6">
+        Each page includes copy blocks, tools, steps, and FAQs for mobile creators.
+      </p>
+      <div className="grid gap-4 sm:grid-cols-2">
         {prompts.map((p) => (
           <PromptCard key={p.slug} article={p} />
         ))}

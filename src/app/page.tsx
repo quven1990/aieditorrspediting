@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PromptCard } from "@/components/PromptCard";
 import { getAllPrompts } from "@/lib/prompts";
-import { SITE_URL } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
+import { SITE_DESCRIPTION, SITE_URL } from "@/lib/site";
+
+export const metadata: Metadata = pageMetadata({
+  title: "AI Editor RSP Editing Prompts",
+  description: SITE_DESCRIPTION,
+  path: "/",
+});
 
 export default function HomePage() {
   const prompts = getAllPrompts();
@@ -15,8 +23,7 @@ export default function HomePage() {
     "@type": "WebSite",
     name: "AI Editor RSP Editing",
     url: SITE_URL,
-    description:
-      "Unofficial English hub for RSP-style AI photo prompts and safer editing workflows.",
+    description: SITE_DESCRIPTION,
   };
 
   return (
@@ -53,6 +60,10 @@ export default function HomePage() {
 
         <section className="mt-14">
           <h2 className="font-display text-2xl font-semibold text-ink">Start here</h2>
+          <h3 className="mt-2 text-base font-semibold text-ink">Featured RSP prompt guides</h3>
+          <p className="mt-1 text-sm text-muted">
+            Best entry points for ai editor rsp editing, rsp editing ai, and portrait workflows.
+          </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {featured.map((p) => (
               <PromptCard key={p.slug} article={p} />
@@ -62,6 +73,10 @@ export default function HomePage() {
 
         <section className="mt-14">
           <h2 className="font-display text-2xl font-semibold text-ink">More guides</h2>
+          <h3 className="mt-2 text-base font-semibold text-ink">Couple, color, and video recipes</h3>
+          <p className="mt-1 text-sm text-muted">
+            CapCut timing notes, Lightroom-style grades, and trend prompts you can copy today.
+          </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {rest.map((p) => (
               <PromptCard key={p.slug} article={p} />
