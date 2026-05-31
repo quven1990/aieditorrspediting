@@ -1,0 +1,23 @@
+{
+  "id": "seo-launch-workflow",
+  "difficulty": "high",
+  "accounts": [
+    "Google Search Console",
+    "Bing Webmaster",
+    "GA4/Clarity",
+    "Ahrefs/SEO Audit（推荐）"
+  ],
+  "env": [],
+  "browserSessions": [
+    "GSC 登录态",
+    "Bing Webmaster 登录态",
+    "Cloudflare Dashboard 登录态"
+  ],
+  "blockingRules": [
+    "缺 GSC/Bing 登录态不能提交/验证收录：BLOCKED",
+    "缺 Ahrefs 权限写 missing_ahrefs_access，不得伪造 Audit"
+  ],
+  "canContinueWithout": [
+    "可先检查 sitemap/robots/schema/canonical"
+  ]
+}

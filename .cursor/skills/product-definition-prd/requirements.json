@@ -1,0 +1,14 @@
+{
+  "id": "product-definition-prd",
+  "difficulty": "low",
+  "accounts": [],
+  "env": [],
+  "browserSessions": [],
+  "blockingRules": [
+    "缺关键词机会或目标市场：BLOCKED",
+    "缺竞品证据：NEEDS_REVIEW，不能直接给 DONE"
+  ],
+  "canContinueWithout": [
+    "信息不完整时可产出 PRD v0，但必须标待确认"
+  ]
+}

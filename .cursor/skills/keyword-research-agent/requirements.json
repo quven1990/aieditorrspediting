@@ -1,0 +1,22 @@
+{
+  "id": "keyword-research-agent",
+  "difficulty": "medium",
+  "accounts": [
+    "Google Trends 或可替代趋势数据源（可手动）",
+    "关键词工具账号：Ahrefs/Semrush/DataForSEO/discoverkeywords.co 任一即可"
+  ],
+  "env": [
+    "KEYWORD_TOOL_API_KEY（可选，只有自动化采集需要）"
+  ],
+  "browserSessions": [
+    "Google Trends",
+    "SERP 搜索引擎"
+  ],
+  "blockingRules": [
+    "没有任何关键词/竞品/目标市场输入：BLOCKED",
+    "没有付费关键词工具：可先用公开 SERP，但最终 SEO 证据标 missing_keyword_tool_access"
+  ],
+  "canContinueWithout": [
+    "公开 SERP + Trends 手动截图可继续轻量研究"
+  ]
+}

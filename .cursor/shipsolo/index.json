@@ -1,0 +1,844 @@
+{
+  "generatedAt": "2026-05-27T14:24:26.059Z",
+  "bundleVersion": "2026.05.27.1",
+  "title": "ShipSolo 做站 Skills 学员版",
+  "description": "内部一键做站与复盘流水线脱敏学员版：13 个标准 Skill 包，自动工厂模式，学员提交关键词和域名后由总控建 Kanban/DAG、派工、验收、返修、上线和复盘。",
+  "source": "ShipSolo 做站 Skills 学员版",
+  "latestArchiveUrl": "/shipsolo-skills/shipsolo-skills-latest.zip",
+  "releaseArchiveUrl": "/shipsolo-skills/releases/2026.05.27.1.zip",
+  "installScriptUrl": "/shipsolo-skills/install.sh",
+  "powershellInstallScriptUrl": "/shipsolo-skills/install.ps1",
+  "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash",
+  "updateCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash",
+  "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+  "changelogUrl": "/shipsolo-skills/CHANGELOG.json",
+  "count": 13,
+  "skills": [
+    {
+      "id": "keyword-research-agent",
+      "title": "关键词研究 Agent（discoverkeywords.co API）",
+      "description": "从想法、种子词、收入榜、托管新站和社区信号中筛出真正值得做的关键词机会。",
+      "owner": "ShipSolo",
+      "agent": "motan",
+      "category": "做站全流程",
+      "stage": "01-research",
+      "version": "2.2.0",
+      "sourcePath": "keyword-research-agent",
+      "updatedAt": "2026-05-27T14:14:36.677Z",
+      "downloadUrl": "/shipsolo-skills/keyword-research-agent/SKILL.md",
+      "usageUrl": "/shipsolo-skills/keyword-research-agent/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/keyword-research-agent/bundle.md",
+      "archiveUrl": "/shipsolo-skills/keyword-research-agent/keyword-research-agent.zip",
+      "archiveSha256": "07c46185c1e865afd01649a473181dedad907c7ae008e555b9490bca2db80910",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- keyword-research-agent",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='keyword-research-agent'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/keyword-research-agent/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "medium",
+        "accounts": [
+          "Google Trends 或可替代趋势数据源（可手动）",
+          "关键词工具账号：Ahrefs/Semrush/DataForSEO/discoverkeywords.co 任一即可"
+        ],
+        "env": [
+          "KEYWORD_TOOL_API_KEY（可选，只有自动化采集需要）"
+        ],
+        "browserSessions": [
+          "Google Trends",
+          "SERP 搜索引擎"
+        ],
+        "blockingRules": [
+          "没有任何关键词/竞品/目标市场输入：BLOCKED",
+          "没有付费关键词工具：可先用公开 SERP，但最终 SEO 证据标 missing_keyword_tool_access"
+        ],
+        "canContinueWithout": [
+          "公开 SERP + Trends 手动截图可继续轻量研究"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/stage-rubric.md",
+        "references/workflow.md",
+        "requirements.json",
+        "scripts/check_setup.py",
+        "scripts/domain_age.py",
+        "scripts/gk_api.py",
+        "scripts/validate_handoff.py",
+        "scripts/validate_keyword_report.py",
+        "templates/opportunity-report-template.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "关键词研究 Agent（discoverkeywords.co API） 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "product-definition-prd",
+      "title": "产品定义与 PRD",
+      "description": "把关键词机会转成可执行 PRD：定位、ICP、站点类型、页面矩阵、真实用户任务和下游合同。",
+      "owner": "ShipSolo",
+      "agent": "moce",
+      "category": "做站全流程",
+      "stage": "02-product",
+      "version": "2.2.0",
+      "sourcePath": "product-definition-prd",
+      "updatedAt": "2026-05-27T14:14:36.681Z",
+      "downloadUrl": "/shipsolo-skills/product-definition-prd/SKILL.md",
+      "usageUrl": "/shipsolo-skills/product-definition-prd/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/product-definition-prd/bundle.md",
+      "archiveUrl": "/shipsolo-skills/product-definition-prd/product-definition-prd.zip",
+      "archiveSha256": "6d33089957c4395555f3fb46a8200372097f3be0194cd086f3246aae1a97b9ba",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- product-definition-prd",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='product-definition-prd'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/product-definition-prd/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "low",
+        "accounts": [],
+        "env": [],
+        "browserSessions": [],
+        "blockingRules": [
+          "缺关键词机会或目标市场：BLOCKED",
+          "缺竞品证据：NEEDS_REVIEW，不能直接给 DONE"
+        ],
+        "canContinueWithout": [
+          "信息不完整时可产出 PRD v0，但必须标待确认"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/feishu-tutorial.md",
+        "references/prd-quality-gate.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_setup.py",
+        "scripts/validate_handoff.py",
+        "scripts/validate_prd.py",
+        "templates/prd-template.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "产品定义与 PRD 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-pricing-calibration",
+      "title": "定价与商业模型校准",
+      "description": "根据竞品、成本、免费额度和转化路径，设计 Free/Pro/Lifetime 或咨询型套餐，并算清楚不能亏。",
+      "owner": "ShipSolo",
+      "agent": "mozhang",
+      "category": "做站全流程",
+      "stage": "03-pricing",
+      "version": "2.2.0",
+      "sourcePath": "site-pricing-calibration",
+      "updatedAt": "2026-05-27T14:14:36.688Z",
+      "downloadUrl": "/shipsolo-skills/site-pricing-calibration/SKILL.md",
+      "usageUrl": "/shipsolo-skills/site-pricing-calibration/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/site-pricing-calibration/bundle.md",
+      "archiveUrl": "/shipsolo-skills/site-pricing-calibration/site-pricing-calibration.zip",
+      "archiveSha256": "8ab9341cf20fe77396e02712bd597571c69b27557dd6c7fdf31912ba350bd2df",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- site-pricing-calibration",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='site-pricing-calibration'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/site-pricing-calibration/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "medium",
+        "accounts": [
+          "竞品官网/定价页访问权限"
+        ],
+        "env": [],
+        "browserSessions": [
+          "竞品 pricing 页面"
+        ],
+        "blockingRules": [
+          "涉及真实支付、成本、套餐上线：缺成本输入则 BLOCKED",
+          "不能编造 API 成本或竞品价格"
+        ],
+        "canContinueWithout": [
+          "可先做价格假设表，但必须标待确认"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/feishu-tutorial.md",
+        "references/pricing-cost-rubric.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_setup.py",
+        "scripts/validate_handoff.py",
+        "scripts/validate_pricing_report.py",
+        "templates/pricing-report-template.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "定价与商业模型校准 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "student-site-compliance-pipeline",
+      "title": "合规与基础法律页面",
+      "description": "把站点的数据、AI、支付、Cookie、IP/素材风险转成可上线的 Privacy、Terms、Cookie/Refund 和禁用表达。",
+      "owner": "ShipSolo",
+      "agent": "modun",
+      "category": "做站全流程",
+      "stage": "04-compliance",
+      "version": "2.2.0",
+      "sourcePath": "student-site-compliance-pipeline",
+      "updatedAt": "2026-05-27T14:14:36.689Z",
+      "downloadUrl": "/shipsolo-skills/student-site-compliance-pipeline/SKILL.md",
+      "usageUrl": "/shipsolo-skills/student-site-compliance-pipeline/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/student-site-compliance-pipeline/bundle.md",
+      "archiveUrl": "/shipsolo-skills/student-site-compliance-pipeline/student-site-compliance-pipeline.zip",
+      "archiveSha256": "c51ee456fdbaa9cafffea0cc7fc024b35934842b4aafc914ea3a22f8ceb147c2",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- student-site-compliance-pipeline",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='student-site-compliance-pipeline'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/student-site-compliance-pipeline/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "medium",
+        "accounts": [],
+        "env": [],
+        "browserSessions": [],
+        "blockingRules": [
+          "涉及支付/登录/上传/AI API 但没有功能说明：BLOCKED",
+          "不能把法律结论写成律师意见"
+        ],
+        "canContinueWithout": [
+          "可先生成合规问题清单和待确认项"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/compliance-risk-matrix.md",
+        "references/feishu-tutorial.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_setup.py",
+        "scripts/validate_compliance_docs.py",
+        "scripts/validate_handoff.py",
+        "templates/compliance-report-template.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "合规与基础法律页面 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-copywriting-student",
+      "title": "落地页文案与转化结构",
+      "description": "把 PRD、定价、合规和 SEO 要求转成可设计、可上线、可转化的页面文案。",
+      "owner": "ShipSolo",
+      "agent": "mobi",
+      "category": "做站全流程",
+      "stage": "05-copy",
+      "version": "2.2.0",
+      "sourcePath": "site-copywriting-student",
+      "updatedAt": "2026-05-27T14:14:36.684Z",
+      "downloadUrl": "/shipsolo-skills/site-copywriting-student/SKILL.md",
+      "usageUrl": "/shipsolo-skills/site-copywriting-student/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/site-copywriting-student/bundle.md",
+      "archiveUrl": "/shipsolo-skills/site-copywriting-student/site-copywriting-student.zip",
+      "archiveSha256": "0bfc66c22946a198df485ff45da04daac831fce7e3c7c5d53a35da146de89318",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- site-copywriting-student",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='site-copywriting-student'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/site-copywriting-student/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "low",
+        "accounts": [],
+        "env": [],
+        "browserSessions": [],
+        "blockingRules": [
+          "缺 PRD/定位/页面矩阵：BLOCKED",
+          "缺定价/合规口径：NEEDS_REVIEW，不能 DONE"
+        ],
+        "canContinueWithout": [
+          "可先出文案草案，但 CTA/价格/合规声明标待确认"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/copy-quality-rules.md",
+        "references/feishu-tutorial.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/audit_copy_quality.py",
+        "scripts/check_setup.py",
+        "scripts/validate_handoff.py",
+        "templates/landing-copy-template.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "落地页文案与转化结构 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-design-student",
+      "title": "视觉设计与页面生成 Prompt",
+      "description": "基于 PRD 和冻结文案生成高保真设计真源：页面、状态、素材、设计系统和前端 handoff。",
+      "owner": "ShipSolo",
+      "agent": "moying",
+      "category": "做站全流程",
+      "stage": "06-design",
+      "version": "2.2.0",
+      "sourcePath": "site-design-student",
+      "updatedAt": "2026-05-27T14:14:36.686Z",
+      "downloadUrl": "/shipsolo-skills/site-design-student/SKILL.md",
+      "usageUrl": "/shipsolo-skills/site-design-student/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/site-design-student/bundle.md",
+      "archiveUrl": "/shipsolo-skills/site-design-student/site-design-student.zip",
+      "archiveSha256": "74afd786acd4ca02180d88cf886862bc4ea651d232185cb2eccb939583bc69b8",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- site-design-student",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='site-design-student'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/site-design-student/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "high",
+        "accounts": [
+          "Stitch 或 Figma/设计工具账号"
+        ],
+        "env": [
+          "STITCH_API_KEY（使用 Stitch 自动生成时必须）"
+        ],
+        "browserSessions": [
+          "Stitch 登录态",
+          "Figma 登录态（如使用 Figma）"
+        ],
+        "blockingRules": [
+          "明确要求 Stitch 生成设计真源但缺 STITCH_API_KEY 或登录态：BLOCKED: SETUP_REQUIRED",
+          "缺 PRD/冻结文案：BLOCKED"
+        ],
+        "canContinueWithout": [
+          "无参考图可继续，但标待确认",
+          "无 Stitch 时只能产出设计 Prompt，不能标 Design DONE"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/anti-ai-design-rules.md",
+        "references/feishu-tutorial.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_setup.py",
+        "scripts/validate_design_handoff.py",
+        "scripts/validate_handoff.py",
+        "templates/page-generation-prompt.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "视觉设计与页面生成 Prompt 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frontend-site-automation",
+      "title": "前端实现与页面落地",
+      "description": "把设计真源落成可访问前端：路由、页面、交互、SEO、分析埋点、Cloudflare 部署和源码同步。",
+      "owner": "ShipSolo",
+      "agent": "mojie",
+      "category": "做站全流程",
+      "stage": "07-frontend",
+      "version": "2.2.0",
+      "sourcePath": "frontend-site-automation",
+      "updatedAt": "2026-05-27T14:14:36.675Z",
+      "downloadUrl": "/shipsolo-skills/frontend-site-automation/SKILL.md",
+      "usageUrl": "/shipsolo-skills/frontend-site-automation/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/frontend-site-automation/bundle.md",
+      "archiveUrl": "/shipsolo-skills/frontend-site-automation/frontend-site-automation.zip",
+      "archiveSha256": "b10712ee7b6d396d663cee4ad998d3d8885a2dfcf33823fc675c121b20251820",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- frontend-site-automation",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='frontend-site-automation'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/frontend-site-automation/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "high",
+        "accounts": [
+          "GitHub",
+          "Cloudflare Pages/Workers",
+          "分析工具账号（GA4/Clarity/Bing，按项目需要）"
+        ],
+        "env": [
+          "GITHUB_TOKEN 或 gh 登录态",
+          "CLOUDFLARE_API_TOKEN",
+          "NEXT_PUBLIC_* 分析埋点 ID（按项目需要）"
+        ],
+        "browserSessions": [
+          "目标站点预览 URL",
+          "Cloudflare Dashboard 登录态（CLI 不足时）"
+        ],
+        "blockingRules": [
+          "不能 push/deploy 时：BLOCKED",
+          "生产域名/DNS/公开发布前必须人工确认",
+          "缺设计真源时不得自行编造 UI"
+        ],
+        "canContinueWithout": [
+          "可本地实现和构建，但上线/部署不能 DONE"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/feishu-tutorial.md",
+        "references/frontend-quality-gate.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_placeholder_content.py",
+        "scripts/check_setup.py",
+        "scripts/validate_handoff.py",
+        "templates/analytics-events.ts",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "前端实现与页面落地 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backend-auto-site-cloudflare-workers",
+      "title": "Cloudflare 后端与会员系统",
+      "description": "用 Cloudflare Workers/D1/R2/Auth/API 支撑小站：登录、会员、内容、订单、资产和前端可消费数据合同。",
+      "owner": "ShipSolo",
+      "agent": "moshu",
+      "category": "做站全流程",
+      "stage": "08-backend",
+      "version": "2.2.0",
+      "sourcePath": "backend-auto-site-cloudflare-workers",
+      "updatedAt": "2026-05-27T14:14:36.673Z",
+      "downloadUrl": "/shipsolo-skills/backend-auto-site-cloudflare-workers/SKILL.md",
+      "usageUrl": "/shipsolo-skills/backend-auto-site-cloudflare-workers/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/backend-auto-site-cloudflare-workers/bundle.md",
+      "archiveUrl": "/shipsolo-skills/backend-auto-site-cloudflare-workers/backend-auto-site-cloudflare-workers.zip",
+      "archiveSha256": "bdd66ca9f14dbcf7549f9b73ccd073a533d7a9ad1fb4f1d5ee3a0e3c925ccd63",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- backend-auto-site-cloudflare-workers",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='backend-auto-site-cloudflare-workers'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/backend-auto-site-cloudflare-workers/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "high",
+        "accounts": [
+          "Cloudflare",
+          "Google OAuth Console（如有登录）",
+          "Stripe/支付后台（如有在线支付）"
+        ],
+        "env": [
+          "CLOUDFLARE_API_TOKEN",
+          "GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET（如有登录）",
+          "STRIPE_SECRET_KEY（如有支付）",
+          "SESSION_SECRET"
+        ],
+        "browserSessions": [
+          "Cloudflare Dashboard 登录态",
+          "Google Cloud Console 登录态",
+          "Stripe Dashboard 登录态（如有）"
+        ],
+        "blockingRules": [
+          "缺 Cloudflare 权限不能创建/迁移 D1/R2/Workers：BLOCKED",
+          "缺 OAuth/支付密钥不能完成登录/支付闭环",
+          "不得要求用户在聊天里发送完整 secret"
+        ],
+        "canContinueWithout": [
+          "可先输出 schema/API 合同和本地 mock，但不能上线 GO"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/cloudflare-backend-architecture.md",
+        "references/feishu-tutorial.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_setup.py",
+        "scripts/validate_env_vars.py",
+        "scripts/validate_handoff.py",
+        "templates/api-contract.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "Cloudflare 后端与会员系统 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "student-site-qa-acceptance",
+      "title": "上线前 QA 验收",
+      "description": "用真实用户任务做最终验收，输出 GO/NO-GO、P0/P1/P2、证据和返修闭环。",
+      "owner": "ShipSolo",
+      "agent": "motest",
+      "category": "做站全流程",
+      "stage": "09-qa",
+      "version": "2.2.0",
+      "sourcePath": "student-site-qa-acceptance",
+      "updatedAt": "2026-05-27T14:14:36.690Z",
+      "downloadUrl": "/shipsolo-skills/student-site-qa-acceptance/SKILL.md",
+      "usageUrl": "/shipsolo-skills/student-site-qa-acceptance/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/student-site-qa-acceptance/bundle.md",
+      "archiveUrl": "/shipsolo-skills/student-site-qa-acceptance/student-site-qa-acceptance.zip",
+      "archiveSha256": "434c314b8ec7df55bc18ac6e8da7c26dee2dda24ad4ead5c03023cea87c810a9",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- student-site-qa-acceptance",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='student-site-qa-acceptance'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/student-site-qa-acceptance/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "medium",
+        "accounts": [
+          "测试账号/会员账号/管理员账号（按功能需要）"
+        ],
+        "env": [],
+        "browserSessions": [
+          "已登录测试账号",
+          "移动端或浏览器自动化会话"
+        ],
+        "blockingRules": [
+          "无登录态只能测公开页，不能给全站 QA_GO",
+          "无生产/预览 URL：BLOCKED"
+        ],
+        "canContinueWithout": [
+          "可做公开页、移动端、SEO 基础检查，并列出未测范围"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/qa-severity-rubric.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_setup.py",
+        "scripts/smoke_test.py",
+        "scripts/validate_handoff.py",
+        "templates/qa-acceptance-report.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "上线前 QA 验收 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seo-launch-workflow",
+      "title": "SEO 上线与收录配置",
+      "description": "上线前后完成 SEO/GEO/AEO 复核：页面矩阵、indexability、schema、GSC、sitemap、AI 可引用结构。",
+      "owner": "ShipSolo",
+      "agent": "moyin",
+      "category": "做站全流程",
+      "stage": "10-seo",
+      "version": "2.2.0",
+      "sourcePath": "seo-launch-workflow",
+      "updatedAt": "2026-05-27T14:14:36.683Z",
+      "downloadUrl": "/shipsolo-skills/seo-launch-workflow/SKILL.md",
+      "usageUrl": "/shipsolo-skills/seo-launch-workflow/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/seo-launch-workflow/bundle.md",
+      "archiveUrl": "/shipsolo-skills/seo-launch-workflow/seo-launch-workflow.zip",
+      "archiveSha256": "02c9f402f796d6d729befa6fcd56b162ce6afab7d536400ec4ad3fb801574d53",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- seo-launch-workflow",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='seo-launch-workflow'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/seo-launch-workflow/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "high",
+        "accounts": [
+          "Google Search Console",
+          "Bing Webmaster",
+          "GA4/Clarity",
+          "Ahrefs/SEO Audit（推荐）"
+        ],
+        "env": [],
+        "browserSessions": [
+          "GSC 登录态",
+          "Bing Webmaster 登录态",
+          "Cloudflare Dashboard 登录态"
+        ],
+        "blockingRules": [
+          "缺 GSC/Bing 登录态不能提交/验证收录：BLOCKED",
+          "缺 Ahrefs 权限写 missing_ahrefs_access，不得伪造 Audit"
+        ],
+        "canContinueWithout": [
+          "可先检查 sitemap/robots/schema/canonical"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/seo-launch-checklist.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_seo_basics.py",
+        "scripts/check_setup.py",
+        "scripts/validate_handoff.py",
+        "templates/page-matrix-status.csv",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "SEO 上线与收录配置 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-ops-growth-launch",
+      "title": "上线发布与冷启动增长",
+      "description": "在 QA/SEO/合规 GO 后执行冷启动：目录提交、社区发布、周刊投稿、首周监控和风险回传。",
+      "owner": "ShipSolo",
+      "agent": "moyun",
+      "category": "做站全流程",
+      "stage": "11-ops",
+      "version": "2.2.0",
+      "sourcePath": "site-ops-growth-launch",
+      "updatedAt": "2026-05-27T14:14:36.687Z",
+      "downloadUrl": "/shipsolo-skills/site-ops-growth-launch/SKILL.md",
+      "usageUrl": "/shipsolo-skills/site-ops-growth-launch/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/site-ops-growth-launch/bundle.md",
+      "archiveUrl": "/shipsolo-skills/site-ops-growth-launch/site-ops-growth-launch.zip",
+      "archiveSha256": "9a9ac8e2c8e5c797242b7dadc905053a62ec6e305532baf8754d1fd079bbfcf8",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- site-ops-growth-launch",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='site-ops-growth-launch'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/site-ops-growth-launch/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "high",
+        "accounts": [
+          "Product Hunt/Reddit/X/目录站账号（按渠道）",
+          "邮箱账号（投稿/联系）"
+        ],
+        "env": [],
+        "browserSessions": [
+          "各发布平台登录态"
+        ],
+        "blockingRules": [
+          "任何公开发布/投稿/社媒发帖前必须人工确认",
+          "缺平台登录态时不能标 Launch DONE"
+        ],
+        "canContinueWithout": [
+          "可先生成发布素材、目录清单、投稿文案草案"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/channel-selection-matrix.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/build_utm_links.py",
+        "scripts/check_setup.py",
+        "scripts/validate_handoff.py",
+        "templates/launch-asset-pack.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "上线发布与冷启动增长 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-data-review-iteration",
+      "title": "数据复盘与迭代决策",
+      "description": "上线后按固定口径做日报/周报/月报，判断 Kill / Iterate / Scale，并把经验回流到 Skills。",
+      "owner": "ShipSolo",
+      "agent": "moxi",
+      "category": "做站全流程",
+      "stage": "12-data-review",
+      "version": "2.2.0",
+      "sourcePath": "site-data-review-iteration",
+      "updatedAt": "2026-05-27T14:14:36.685Z",
+      "downloadUrl": "/shipsolo-skills/site-data-review-iteration/SKILL.md",
+      "usageUrl": "/shipsolo-skills/site-data-review-iteration/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/site-data-review-iteration/bundle.md",
+      "archiveUrl": "/shipsolo-skills/site-data-review-iteration/site-data-review-iteration.zip",
+      "archiveSha256": "df9eb979fa760d6d0771a9ee041a270a40e1ce506c1733960c30a3af59609afb",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- site-data-review-iteration",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='site-data-review-iteration'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/site-data-review-iteration/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "medium",
+        "accounts": [
+          "GA4/Clarity/Bing/GSC/Plausible 等分析后台"
+        ],
+        "env": [],
+        "browserSessions": [
+          "分析后台登录态"
+        ],
+        "blockingRules": [
+          "缺数据源不能做结论性 Kill/Iterate/Scale",
+          "不能编造转化/流量数据"
+        ],
+        "canContinueWithout": [
+          "可先生成数据需求清单和复盘模板"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/metrics-and-decision-rules.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_setup.py",
+        "scripts/detect_anomalies.py",
+        "scripts/validate_handoff.py",
+        "templates/stage-handoff-template.md",
+        "templates/weekly-review-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.2.0",
+          "date": "2026-05-26",
+          "changes": [
+            "数据复盘与迭代决策 学员版 2.2.0 发布。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-orchestrator-playbook",
+      "title": "全流程主持台（自动做站工厂）",
+      "description": "把 12 个专业 Skill 串成一条自动做站流水线：学员提交关键词和域名，总控建 Kanban/DAG，自动派工、验收、返修、上线和复盘。",
+      "owner": "ShipSolo",
+      "agent": "xiaomo",
+      "category": "做站全流程",
+      "stage": "13-orchestrator",
+      "version": "2.4.0",
+      "sourcePath": "site-orchestrator-playbook",
+      "updatedAt": "2026-05-27T14:23:36.876Z",
+      "downloadUrl": "/shipsolo-skills/site-orchestrator-playbook/SKILL.md",
+      "usageUrl": "/shipsolo-skills/site-orchestrator-playbook/references/USAGE.md",
+      "bundleUrl": "/shipsolo-skills/site-orchestrator-playbook/bundle.md",
+      "archiveUrl": "/shipsolo-skills/site-orchestrator-playbook/site-orchestrator-playbook.zip",
+      "archiveSha256": "632fddecd28cf5923f688d07b438e55873369f68827df3d5440930989f07e05f",
+      "installCommand": "curl -fsSL https://shipsolo.io/shipsolo-skills/install.sh | SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>' bash -s -- site-orchestrator-playbook",
+      "powershellInstallCommand": "$env:SHIPSOLO_SKILLS_TOKEN='<从领航计划页面复制的安装令牌>'; $env:SHIPSOLO_SKILL='site-orchestrator-playbook'; irm https://shipsolo.io/shipsolo-skills/install.ps1 | iex",
+      "changelogUrl": "/shipsolo-skills/site-orchestrator-playbook/CHANGELOG.md",
+      "requirements": {
+        "difficulty": "medium",
+        "accounts": [
+          "按被调用阶段准备：GitHub/Cloudflare/Stitch/GSC 等"
+        ],
+        "env": [
+          "按被调用阶段准备对应环境变量"
+        ],
+        "browserSessions": [
+          "按被调用阶段准备对应登录态"
+        ],
+        "blockingRules": [
+          "任一阶段进入生产部署/公开发布/支付/真实用户数据时，缺权限必须 BLOCKED",
+          "不得让下游假装完成"
+        ],
+        "canContinueWithout": [
+          "可以先编排 DAG 和任务清单，缺权限的阶段标 setup_required"
+        ]
+      },
+      "files": [
+        "CHANGELOG.md",
+        "SKILL.md",
+        "references/USAGE.md",
+        "references/pipeline-stage-contracts.md",
+        "references/stage-rubric.md",
+        "requirements.json",
+        "scripts/check_setup.py",
+        "scripts/validate_handoff.py",
+        "scripts/validate_stage_handoff.py",
+        "templates/project-control-board.md",
+        "templates/stage-handoff-template.md",
+        "bundle.md"
+      ],
+      "changelog": [
+        {
+          "version": "2.4.0",
+          "date": "2026-05-27",
+          "changes": [
+            "全流程主持台（自动做站工厂） 学员版 2.4.0 发布。"
+          ]
+        }
+      ]
+    }
+  ],
+  "releaseNotes": [
+    {
+      "type": "added",
+      "text": "新增 Preflight 机制：每个 Skill 显示所需账号、Token、浏览器登录态、阻断规则和可降级路径。"
+    },
+    {
+      "type": "changed",
+      "text": "13 个学员版 Skills 全量升级到 2.2.0，默认先检查环境再执行，缺关键权限输出 [BLOCKED: SETUP_REQUIRED]。"
+    },
+    {
+      "type": "fixed",
+      "text": "统一安全索要话术：禁止在聊天里发送完整 token、密码、验证码、Cookie；优先写入 .env、平台 Secrets 或完成浏览器登录。"
+    }
+  ]
+}

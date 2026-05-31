@@ -1,0 +1,14 @@
+{
+  "id": "student-site-compliance-pipeline",
+  "difficulty": "medium",
+  "accounts": [],
+  "env": [],
+  "browserSessions": [],
+  "blockingRules": [
+    "涉及支付/登录/上传/AI API 但没有功能说明：BLOCKED",
+    "不能把法律结论写成律师意见"
+  ],
+  "canContinueWithout": [
+    "可先生成合规问题清单和待确认项"
+  ]
+}

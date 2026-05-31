@@ -1,0 +1,28 @@
+{
+  "id": "backend-auto-site-cloudflare-workers",
+  "difficulty": "high",
+  "accounts": [
+    "Cloudflare",
+    "Google OAuth Console（如有登录）",
+    "Stripe/支付后台（如有在线支付）"
+  ],
+  "env": [
+    "CLOUDFLARE_API_TOKEN",
+    "GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET（如有登录）",
+    "STRIPE_SECRET_KEY（如有支付）",
+    "SESSION_SECRET"
+  ],
+  "browserSessions": [
+    "Cloudflare Dashboard 登录态",
+    "Google Cloud Console 登录态",
+    "Stripe Dashboard 登录态（如有）"
+  ],
+  "blockingRules": [
+    "缺 Cloudflare 权限不能创建/迁移 D1/R2/Workers：BLOCKED",
+    "缺 OAuth/支付密钥不能完成登录/支付闭环",
+    "不得要求用户在聊天里发送完整 secret"
+  ],
+  "canContinueWithout": [
+    "可先输出 schema/API 合同和本地 mock，但不能上线 GO"
+  ]
+}

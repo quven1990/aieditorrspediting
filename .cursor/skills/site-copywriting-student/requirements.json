@@ -1,0 +1,14 @@
+{
+  "id": "site-copywriting-student",
+  "difficulty": "low",
+  "accounts": [],
+  "env": [],
+  "browserSessions": [],
+  "blockingRules": [
+    "缺 PRD/定位/页面矩阵：BLOCKED",
+    "缺定价/合规口径：NEEDS_REVIEW，不能 DONE"
+  ],
+  "canContinueWithout": [
+    "可先出文案草案，但 CTA/价格/合规声明标待确认"
+  ]
+}

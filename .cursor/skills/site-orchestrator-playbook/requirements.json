@@ -1,0 +1,20 @@
+{
+  "id": "site-orchestrator-playbook",
+  "difficulty": "medium",
+  "accounts": [
+    "按被调用阶段准备：GitHub/Cloudflare/Stitch/GSC 等"
+  ],
+  "env": [
+    "按被调用阶段准备对应环境变量"
+  ],
+  "browserSessions": [
+    "按被调用阶段准备对应登录态"
+  ],
+  "blockingRules": [
+    "任一阶段进入生产部署/公开发布/支付/真实用户数据时，缺权限必须 BLOCKED",
+    "不得让下游假装完成"
+  ],
+  "canContinueWithout": [
+    "可以先编排 DAG 和任务清单，缺权限的阶段标 setup_required"
+  ]
+}

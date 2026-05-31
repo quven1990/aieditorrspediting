@@ -1,0 +1,18 @@
+{
+  "id": "site-pricing-calibration",
+  "difficulty": "medium",
+  "accounts": [
+    "竞品官网/定价页访问权限"
+  ],
+  "env": [],
+  "browserSessions": [
+    "竞品 pricing 页面"
+  ],
+  "blockingRules": [
+    "涉及真实支付、成本、套餐上线：缺成本输入则 BLOCKED",
+    "不能编造 API 成本或竞品价格"
+  ],
+  "canContinueWithout": [
+    "可先做价格假设表，但必须标待确认"
+  ]
+}

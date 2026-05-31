@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-ink antialiased;
+  }
+}
+
+.prose-page h2 {
+  @apply font-display text-xl font-semibold text-ink mt-10 mb-3;
+}
+
+.prose-page h3 {
+  @apply font-semibold text-ink mt-6 mb-2;
+}
+
+.prose-page p {
+  @apply text-muted leading-relaxed mb-4;
+}
+
+.prose-page ul {
+  @apply list-disc pl-5 text-muted space-y-2 mb-4;
+}
+
+.prose-page ol {
+  @apply list-decimal pl-5 text-muted space-y-2 mb-4;
+}

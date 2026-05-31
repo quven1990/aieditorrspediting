@@ -1,0 +1,83 @@
+import Link from "next/link";
+import { PromptCard } from "@/components/PromptCard";
+import { getAllPrompts } from "@/lib/prompts";
+import { SITE_URL } from "@/lib/site";
+
+export default function HomePage() {
+  const prompts = getAllPrompts();
+  const featured = prompts.filter((p) =>
+    ["ai-editor-rsp-editing-guide", "rsp-editing-ai", "ai-editor-rsp"].includes(p.slug),
+  );
+  const rest = prompts.filter((p) => !featured.find((f) => f.slug === p.slug)).slice(0, 6);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "AI Editor RSP Editing",
+    url: SITE_URL,
+    description:
+      "Unofficial English hub for RSP-style AI photo prompts and safer editing workflows.",
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="mx-auto max-w-3xl px-4 py-12">
+        <p className="text-xs font-medium uppercase tracking-widest text-accent">
+          Unofficial English hub
+        </p>
+        <h1 className="mt-3 font-display text-4xl font-semibold text-ink leading-tight">
+          AI Editor RSP Editing Prompts
+        </h1>
+        <p className="mt-4 text-lg text-muted leading-relaxed">
+          Copy RSP-style AI photo prompts, template recipes, and Lightroom-style color steps—
+          with safety notes and no risky downloads.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            href="/prompts/"
+            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90"
+          >
+            Browse all prompts
+          </Link>
+          <Link
+            href="/what-is-rsp-editing/"
+            className="rounded-lg border border-black/10 bg-card px-5 py-2.5 text-sm font-medium text-ink hover:border-accent/40"
+          >
+            What is RSP editing?
+          </Link>
+        </div>
+
+        <section className="mt-14">
+          <h2 className="font-display text-2xl font-semibold text-ink">Start here</h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {featured.map((p) => (
+              <PromptCard key={p.slug} article={p} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-14">
+          <h2 className="font-display text-2xl font-semibold text-ink">More guides</h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {rest.map((p) => (
+              <PromptCard key={p.slug} article={p} />
+            ))}
+          </div>
+        </section>
+
+        <aside className="mt-14 rounded-xl border border-amber-200/80 bg-amber-50/80 p-5 text-sm text-amber-950">
+          <strong>Disclaimer:</strong> Not affiliated with RSP Editing, CapCut, VN, Adobe, or
+          ByteDance. Prompt guides only—we do not host template files or APKs. Read{" "}
+          <Link href="/safe-use/" className="underline font-medium">
+            Safe Use
+          </Link>{" "}
+          before posting edits of real people.
+        </aside>
+      </div>
+    </>
+  );
+}

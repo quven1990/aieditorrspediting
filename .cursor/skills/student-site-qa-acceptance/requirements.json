@@ -1,0 +1,19 @@
+{
+  "id": "student-site-qa-acceptance",
+  "difficulty": "medium",
+  "accounts": [
+    "测试账号/会员账号/管理员账号（按功能需要）"
+  ],
+  "env": [],
+  "browserSessions": [
+    "已登录测试账号",
+    "移动端或浏览器自动化会话"
+  ],
+  "blockingRules": [
+    "无登录态只能测公开页，不能给全站 QA_GO",
+    "无生产/预览 URL：BLOCKED"
+  ],
+  "canContinueWithout": [
+    "可做公开页、移动端、SEO 基础检查，并列出未测范围"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "frontend-site-automation",
+  "difficulty": "high",
+  "accounts": [
+    "GitHub",
+    "Cloudflare Pages/Workers",
+    "分析工具账号（GA4/Clarity/Bing，按项目需要）"
+  ],
+  "env": [
+    "GITHUB_TOKEN 或 gh 登录态",
+    "CLOUDFLARE_API_TOKEN",
+    "NEXT_PUBLIC_* 分析埋点 ID（按项目需要）"
+  ],
+  "browserSessions": [
+    "目标站点预览 URL",
+    "Cloudflare Dashboard 登录态（CLI 不足时）"
+  ],
+  "blockingRules": [
+    "不能 push/deploy 时：BLOCKED",
+    "生产域名/DNS/公开发布前必须人工确认",
+    "缺设计真源时不得自行编造 UI"
+  ],
+  "canContinueWithout": [
+    "可本地实现和构建，但上线/部署不能 DONE"
+  ]
+}

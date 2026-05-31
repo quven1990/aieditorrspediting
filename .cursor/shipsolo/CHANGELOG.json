@@ -1,0 +1,138 @@
+{
+  "bundleVersion": "2026.05.27.1",
+  "generatedAt": "2026-05-27T14:24:26.059Z",
+  "title": "ShipSolo 做站 Skills 学员版",
+  "releaseNotes": [
+    {
+      "type": "added",
+      "text": "新增 Preflight 机制：每个 Skill 显示所需账号、Token、浏览器登录态、阻断规则和可降级路径。"
+    },
+    {
+      "type": "changed",
+      "text": "13 个学员版 Skills 全量升级到 2.2.0，默认先检查环境再执行，缺关键权限输出 [BLOCKED: SETUP_REQUIRED]。"
+    },
+    {
+      "type": "fixed",
+      "text": "统一安全索要话术：禁止在聊天里发送完整 token、密码、验证码、Cookie；优先写入 .env、平台 Secrets 或完成浏览器登录。"
+    }
+  ],
+  "changes": [
+    {
+      "id": "keyword-research-agent",
+      "title": "关键词研究 Agent（discoverkeywords.co API）",
+      "version": "2.2.0",
+      "stage": "01-research",
+      "changes": [
+        "关键词研究 Agent（discoverkeywords.co API） 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "product-definition-prd",
+      "title": "产品定义与 PRD",
+      "version": "2.2.0",
+      "stage": "02-product",
+      "changes": [
+        "产品定义与 PRD 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "site-pricing-calibration",
+      "title": "定价与商业模型校准",
+      "version": "2.2.0",
+      "stage": "03-pricing",
+      "changes": [
+        "定价与商业模型校准 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "student-site-compliance-pipeline",
+      "title": "合规与基础法律页面",
+      "version": "2.2.0",
+      "stage": "04-compliance",
+      "changes": [
+        "合规与基础法律页面 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "site-copywriting-student",
+      "title": "落地页文案与转化结构",
+      "version": "2.2.0",
+      "stage": "05-copy",
+      "changes": [
+        "落地页文案与转化结构 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "site-design-student",
+      "title": "视觉设计与页面生成 Prompt",
+      "version": "2.2.0",
+      "stage": "06-design",
+      "changes": [
+        "视觉设计与页面生成 Prompt 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "frontend-site-automation",
+      "title": "前端实现与页面落地",
+      "version": "2.2.0",
+      "stage": "07-frontend",
+      "changes": [
+        "前端实现与页面落地 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "backend-auto-site-cloudflare-workers",
+      "title": "Cloudflare 后端与会员系统",
+      "version": "2.2.0",
+      "stage": "08-backend",
+      "changes": [
+        "Cloudflare 后端与会员系统 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "student-site-qa-acceptance",
+      "title": "上线前 QA 验收",
+      "version": "2.2.0",
+      "stage": "09-qa",
+      "changes": [
+        "上线前 QA 验收 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "seo-launch-workflow",
+      "title": "SEO 上线与收录配置",
+      "version": "2.2.0",
+      "stage": "10-seo",
+      "changes": [
+        "SEO 上线与收录配置 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "site-ops-growth-launch",
+      "title": "上线发布与冷启动增长",
+      "version": "2.2.0",
+      "stage": "11-ops",
+      "changes": [
+        "上线发布与冷启动增长 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "site-data-review-iteration",
+      "title": "数据复盘与迭代决策",
+      "version": "2.2.0",
+      "stage": "12-data-review",
+      "changes": [
+        "数据复盘与迭代决策 学员版 2.2.0 发布。"
+      ]
+    },
+    {
+      "id": "site-orchestrator-playbook",
+      "title": "全流程主持台（自动做站工厂）",
+      "version": "2.4.0",
+      "stage": "13-orchestrator",
+      "changes": [
+        "全流程主持台（自动做站工厂） 学员版 2.4.0 发布。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "site-design-student",
+  "difficulty": "high",
+  "accounts": [
+    "Stitch 或 Figma/设计工具账号"
+  ],
+  "env": [
+    "STITCH_API_KEY（使用 Stitch 自动生成时必须）"
+  ],
+  "browserSessions": [
+    "Stitch 登录态",
+    "Figma 登录态（如使用 Figma）"
+  ],
+  "blockingRules": [
+    "明确要求 Stitch 生成设计真源但缺 STITCH_API_KEY 或登录态：BLOCKED: SETUP_REQUIRED",
+    "缺 PRD/冻结文案：BLOCKED"
+  ],
+  "canContinueWithout": [
+    "无参考图可继续，但标待确认",
+    "无 Stitch 时只能产出设计 Prompt，不能标 Design DONE"
+  ]
+}

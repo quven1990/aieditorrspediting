@@ -1,0 +1,19 @@
+{
+  "id": "site-ops-growth-launch",
+  "difficulty": "high",
+  "accounts": [
+    "Product Hunt/Reddit/X/目录站账号（按渠道）",
+    "邮箱账号（投稿/联系）"
+  ],
+  "env": [],
+  "browserSessions": [
+    "各发布平台登录态"
+  ],
+  "blockingRules": [
+    "任何公开发布/投稿/社媒发帖前必须人工确认",
+    "缺平台登录态时不能标 Launch DONE"
+  ],
+  "canContinueWithout": [
+    "可先生成发布素材、目录清单、投稿文案草案"
+  ]
+}

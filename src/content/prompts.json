@@ -1,0 +1,363 @@
+[
+  {
+    "slug": "rsp-editing-ai",
+    "title": "RSP Editing AI: What It Means and How to Start",
+    "description": "Learn what rsp editing ai refers to, which apps people use, and a safe starter workflow without unofficial downloads.",
+    "answer": "Rsp editing ai usually means ready-made AI photo looks and mobile edit recipes—not one official app. Use copy-paste prompts in your own editor and avoid unknown template files.",
+    "primaryKeyword": "rsp editing ai",
+    "category": "Guides",
+    "prompt": "Portrait photo, soft cinematic lighting, natural skin texture, shallow depth of field, warm highlights, clean background, smartphone-ready aspect ratio, photorealistic, no watermark, no text overlay",
+    "variables": ["lighting mood: golden hour | overcast | studio", "background: neutral wall | outdoor bokeh", "outfit color for contrast"],
+    "negativePrompt": "plastic skin, extra fingers, blurry face, logo, watermark, cartoon unless intended, distorted text",
+    "tools": ["Any AI image app you already use (e.g. phone editor with AI generate)", "Optional: Lightroom or Snapseed for final color"],
+    "steps": [
+      "Pick one clear portrait with even lighting—avoid heavy filters on the source.",
+      "Paste the base prompt; add one variable line only (do not stack ten styles at once).",
+      "Generate 2–4 variants; choose the most natural skin texture.",
+      "Fix eyes and hair manually if the app allows inpainting.",
+      "Export at max quality; compress once for Instagram, not twice.",
+      "Post only content you have rights to use."
+    ],
+    "faq": [
+      {
+        "q": "Is rsp editing ai an official product?",
+        "a": "No. It is community language for trend looks and shared recipes. This site is not affiliated with any brand named RSP Editing."
+      },
+      {
+        "q": "Do I need to download template files?",
+        "a": "Not for this workflow. Prefer prompts and manual steps instead of unknown APK or project files."
+      },
+      {
+        "q": "Why do results look fake?",
+        "a": "Usually overcooked prompts, low-res sources, or double compression. Reduce effect stacking and keep one lighting idea per render."
+      }
+    ],
+    "commonMistakes": [
+      "Treating random download pages as “official” RSP bundles.",
+      "Stacking five trend names in one prompt so faces melt.",
+      "Posting edits of people who did not consent."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "ai-editor-rsp",
+    "title": "AI Editor RSP: Prompt Structure That Actually Works",
+    "description": "A practical ai editor rsp prompt layout with variables, negatives, and mobile export tips.",
+    "answer": "Ai editor rsp searches are informational: users want prompt cards and steps, not a single licensed editor. Use a short subject line, lighting, lens feel, and a tight negative list.",
+    "primaryKeyword": "ai editor rsp",
+    "category": "Guides",
+    "prompt": "Close-up portrait, 85mm lens look, soft rim light, detailed eyes, natural pores, muted teal shadows, clean composition, 4:5 aspect ratio, high detail",
+    "variables": ["expression: calm | confident smile", "wardrobe: solid color shirt", "environment: cafe window light"],
+    "negativePrompt": "oversharpening, waxy skin, duplicate pupils, frame borders, brand logos",
+    "tools": ["AI generate/inpaint in your preferred app", "Lightroom or native phone editor for crop and tone"],
+    "steps": [
+      "Define one hero subject (portrait vs couple) before writing prompts.",
+      "Add lens and lighting in plain English—skip jargon chains.",
+      "Run a small batch; pick one winner before tuning color.",
+      "Match export ratio to Reels (9:16) or feed (4:5) before posting.",
+      "Archive the winning prompt text in your notes for reuse."
+    ],
+    "faq": [
+      {
+        "q": "Which AI editor is “the” RSP editor?",
+        "a": "There isn’t one. People combine mainstream AI photo tools with manual color and cuts."
+      },
+      {
+        "q": "Can I rank with only tool screenshots?",
+        "a": "Readers expect copy-paste prompts and safety notes. Text recipes outperform bare UI galleries."
+      }
+    ],
+    "commonMistakes": [
+      "Copying entire prompt dumps without testing on your own face/lighting.",
+      "Using 9:16 and 1:1 interchangeably without recropping.",
+      "Ignoring negative prompts—small negatives prevent logo-like artifacts."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "rsp-editing-ai-portrait-prompt",
+    "title": "RSP Editing AI Portrait Prompt (Copy-Paste)",
+    "description": "Portrait-focused rsp editing ai prompt with variables for skin tone, lighting, and background.",
+    "answer": "For rsp-style portraits, lock likeness first: one face, one light direction, one background idea. Add style words only after the base render looks like you.",
+    "primaryKeyword": "rsp editing ai portrait",
+    "category": "Portrait",
+    "prompt": "Professional headshot, soft key light from left, subtle fill, natural skin tones, sharp eyes, shallow depth of field, neutral background, photorealistic, 4:5",
+    "variables": ["skin tone fidelity: match reference photo", "hair: keep original style", "background: soft gray gradient"],
+    "negativePrompt": "age change, ethnicity change, heavy makeup unless requested, blur, noise, watermark",
+    "tools": ["AI portrait tool with reference/upload if available", "Snapseed or Lightroom for final contrast"],
+    "steps": [
+      "Upload a well-lit reference facing the camera.",
+      "Paste prompt; enable reference/likeness mode if the app supports it.",
+      "Reject variants that change bone structure or age.",
+      "Retouch only exposure and white balance manually.",
+      "Save before/after on device—do not share private references publicly."
+    ],
+    "faq": [
+      {
+        "q": "How do I keep the face looking like me?",
+        "a": "Use reference mode, fewer style adjectives, and reject structural changes early."
+      },
+      {
+        "q": "Is a DP-style crop different?",
+        "a": "DP usually means tighter headshot framing—crop tighter after generation instead of prompting twice."
+      }
+    ],
+    "commonMistakes": [
+      "Using group photos as reference for single portraits.",
+      "Publishing someone else’s reference image.",
+      "Chasing porcelain skin keywords that kill texture."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "rsp-editing-ai-couple-prompt",
+    "title": "RSP Editing AI Couple Prompt Recipe",
+    "description": "Couple portrait prompt for rsp editing trends with matching lighting and color harmony.",
+    "answer": "Couple rsp edits fail when lighting does not match between subjects. Generate or compose one shared light direction and similar color grade on both faces.",
+    "primaryKeyword": "rsp editing ai couple",
+    "category": "Couple",
+    "prompt": "Couple portrait, matching warm cinematic grade, soft backlight, natural smiles, coordinated outfits, outdoor golden hour, photorealistic, gentle film grain, 4:5",
+    "variables": ["pose: walking together | seated close", "season: spring blossoms | urban night"],
+    "negativePrompt": "merged faces, mismatched shadows, extra limbs, text hearts watermark",
+    "tools": ["AI couple/portrait mode if available", "CapCut or VN for slideshow export only—no unknown project files"],
+    "steps": [
+      "Start from one photo with both faces visible and similar exposure.",
+      "Prompt for shared light and grade—not two different styles.",
+      "Check hands and hair edges at 100% zoom.",
+      "Color-match skin separately only if tools allow local edits.",
+      "Export once; add music in video apps using licensed audio."
+    ],
+    "faq": [
+      {
+        "q": "Can I combine two solo AI portraits?",
+        "a": "Possible but hard. One shared source photo or a true couple mode gives cleaner shadows."
+      },
+      {
+        "q": "Are trending couple songs required?",
+        "a": "No for still posts. For reels, use platform-licensed music, not ripped tracks."
+      }
+    ],
+    "commonMistakes": [
+      "Different white balance on each person.",
+      "Using celebrity couple references you do not have rights to.",
+      "Overlays that cover faces—bad for compression on reels."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "rsp-editing-ai-holi-trend",
+    "title": "RSP Holi-Style Color Prompt (Festival Look)",
+    "description": "Festival color powder aesthetic for rsp editing trends—skin-safe prompt wording and cleanup tips.",
+    "answer": "Holi-style rsp trends need controlled color on skin and clothing—prompt color powder as soft particles, not face replacement. Keep likeness and avoid cultural misuse in captions.",
+    "primaryKeyword": "rsp editing holi",
+    "category": "Trend",
+    "prompt": "Portrait with soft Holi color powder in air, pink and yellow pigments, natural skin visible, joyful expression, daylight, photorealistic, high detail, respectful festive mood",
+    "variables": ["pigment intensity: light dust | medium splash", "background: outdoor courtyard"],
+    "negativePrompt": "face paint mask, clown makeup, cultural stereotypes, logos, text",
+    "tools": ["AI generate with reference", "Manual brush to tone down oversaturated channels"],
+    "steps": [
+      "Use respectful, accurate captions if you post festival content.",
+      "Keep pigment as environmental effect, not full face replacement.",
+      "Reduce saturation in post if channels clip on mobile screens.",
+      "Do not stereotype or mock traditions in copy.",
+      "Credit photographers if you used licensed stock references."
+    ],
+    "faq": [
+      {
+        "q": "Can I use this if I do not celebrate Holi?",
+        "a": "Be thoughtful—avoid mockery. Many creators use color aesthetics with accurate, respectful context."
+      },
+      {
+        "q": "Why do colors look neon?",
+        "a": "Lower saturation and soften reds in post; AI defaults often push neon."
+      }
+    ],
+    "commonMistakes": [
+      "Insensitive captions or costumes.",
+      "Replacing entire skin tone with pigment layers.",
+      "Stealing cultural festival photos without rights."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "rsp-editing-capcut-workflow",
+    "title": "RSP Editing CapCut Workflow (No File Downloads)",
+    "description": "Text-only CapCut workflow for rsp-style reels: timing, B-roll density, and export settings.",
+    "answer": "For rsp capcut workflows, rebuild trends manually: hook in 0–2s, beat markers every 2–3s, captions in safe zone, export 1080x1920 30fps. We do not host project files.",
+    "primaryKeyword": "rsp editing capcut",
+    "category": "Video",
+    "prompt": "N/A — video workflow",
+    "variables": ["hook length: 1.5s face close-up", "b-roll: 40% coverage after hook"],
+    "negativePrompt": "N/A",
+    "tools": ["CapCut (official store build)", "Your AI stills from prompt pages"],
+    "steps": [
+      "Import 3–5 stills or short clips you created yourself.",
+      "Place strongest face shot at 0:00 with on-beat cut at bar 1.",
+      "Add auto-captions; move text above platform UI safe area.",
+      "Use licensed music from CapCut library—not ripped MP3s.",
+      "Export 1080x1920; avoid sharpening twice.",
+      "Disclose AI-generated imagery if your platform requires it."
+    ],
+    "faq": [
+      {
+        "q": "Where are QR template codes?",
+        "a": "We do not publish unknown QR/project imports. Build timelines manually to reduce malware risk."
+      },
+      {
+        "q": "Why is my reel blurry?",
+        "a": "Usually low source resolution or aggressive platform recompression—start from highest still exports."
+      }
+    ],
+    "commonMistakes": [
+      "Importing random .capcut files from Telegram.",
+      "Covering faces with huge caption blocks.",
+      "Using copyrighted music outside the app library."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "rsp-editing-lightroom-style-settings",
+    "title": "RSP Lightroom-Style Color Recipe (Manual Settings)",
+    "description": "Lightroom-style tone recipe to finish AI portraits: curves, HSL, and mobile export.",
+    "answer": "Rsp lightroom-style looks are usually lifted shadows, warm skin hues, and muted greens. Apply on your AI export—not on heavily filtered JPEGs.",
+    "primaryKeyword": "rsp editing lightroom",
+    "category": "Color",
+    "prompt": "N/A — color grading recipe",
+    "variables": ["warmth: +5 to +12", "green saturation: -10 to -25 in foliage backgrounds"],
+    "negativePrompt": "N/A",
+    "tools": ["Lightroom mobile (free tier ok)", "Snapseed as alternative"],
+    "steps": [
+      "Profile: neutral or portrait; disable auto HDR if it flattens faces.",
+      "Exposure +0.2 to +0.5; Highlights -20 to -40; Shadows +15 to +30.",
+      "HSL: orange/yellow hue slightly toward red for skin warmth; reduce green sat in background.",
+      "Texture +5 to +10; Clarity -5 to 0 on portraits (avoid crunchy skin).",
+      "Export sRGB, long edge 2048+ for feed; one compression pass only."
+    ],
+    "faq": [
+      {
+        "q": "Are these official Lightroom presets?",
+        "a": "No. They are descriptive starting points—tune per photo."
+      },
+      {
+        "q": "Preset one-click vs manual?",
+        "a": "Manual per photo survives different AI outputs better than one global preset."
+      }
+    ],
+    "commonMistakes": [
+      "Cranking clarity on AI skin.",
+      "Grading before fixing white balance.",
+      "Downloading preset packs from untrusted sites."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "ai-editor-rsp-editing-guide",
+    "title": "AI Editor RSP Editing: Complete Starter Guide",
+    "description": "Pillar guide for ai editor rsp editing: prompts, safety, tools, and weekly workflow for mobile creators.",
+    "answer": "Ai editor rsp editing is an informational query: users want English prompt cards, safety notes, and mobile workflows—not a single downloadable editor. Start with one portrait prompt, manual color, and clear unofficial disclaimers.",
+    "primaryKeyword": "ai editor rsp editing",
+    "category": "Pillar",
+    "prompt": "Editorial portrait, natural light, balanced skin tones, clean background, photorealistic, smartphone 4:5, subtle cinematic contrast",
+    "variables": ["trend: portrait | couple | festival color", "finish: lightroom-style warmth"],
+    "negativePrompt": "watermark, logo, deformed hands, plastic skin, text artifacts",
+    "tools": ["Your AI photo app", "Lightroom or Snapseed", "CapCut for optional motion"],
+    "steps": [
+      "Read /what-is-rsp-editing/ for terminology and limits.",
+      "Pick one prompt page matching your trend; copy the block verbatim as a starting point.",
+      "Tune variables one at a time; log what changed.",
+      "Finish color in Lightroom-style recipe page.",
+      "Publish with rights you own; link to /safe-use/ policies mentally before posting.",
+      "Track queries in Search Console after launch—double down on pages that earn impressions."
+    ],
+    "faq": [
+      {
+        "q": "Is this the official AI Editor RSP Editing site?",
+        "a": "No. aieditorrspediting.xyz is an independent English guide and is not affiliated with other domains using similar names."
+      },
+      {
+        "q": "How is this different from other RSP sites?",
+        "a": "We focus on English prompt cards, mistake notes, and no hosted template files."
+      },
+      {
+        "q": "Do I need an account here?",
+        "a": "No accounts in phase 1—read, copy prompts, edit locally."
+      }
+    ],
+    "commonMistakes": [
+      "Expecting one APK to be “the” AI editor rsp app.",
+      "Skipping negative prompts.",
+      "Publishing before checking Safe Use guidelines."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "what-is-rsp-editing-ai",
+    "title": "What Is RSP Editing AI?",
+    "description": "Plain-English explainer: what rsp editing ai means on social media and how it differs from official software.",
+    "answer": "RSP editing ai describes a social trend ecosystem—AI portraits, capcut timing, and color recipes—not one certified AI product. Treat it as a style label, not an app store name.",
+    "primaryKeyword": "what is rsp editing ai",
+    "category": "Guides",
+    "prompt": "N/A — explainer page",
+    "variables": [],
+    "negativePrompt": "N/A",
+    "tools": ["Any mainstream AI photo and video apps you already trust"],
+    "steps": [
+      "Separate trend language from app store names when searching.",
+      "Prefer prompt-and-workflow sites that disclose unofficial status.",
+      "Avoid unknown download bundles.",
+      "Verify platform rules on AI disclosure.",
+      "Bookmark primary prompt pages you tested yourself."
+    ],
+    "faq": [
+      {
+        "q": "Who owns the term RSP Editing?",
+        "a": "It is used by many creators and sites; no single owner. Always read each site’s disclaimer."
+      },
+      {
+        "q": "Is rsp editing the same as rsp editing ai?",
+        "a": "Often overlapping—ai variant usually emphasizes AI portrait generation in the trend."
+      }
+    ],
+    "commonMistakes": [
+      "Assuming SERP leaders are official vendors.",
+      "Downloading mods to “unlock” AI features.",
+      "Confusing SEO articles with product homepages."
+    ],
+    "updated": "2026-05-31"
+  },
+  {
+    "slug": "rsp-editing-vs-ai-photo-apps",
+    "title": "RSP Editing vs Mainstream AI Photo Apps",
+    "description": "Compare rsp editing workflows with typical AI photo apps—what to do in-app vs in post.",
+    "answer": "Rsp editing is a workflow label; AI photo apps are tools. Use apps for generation and inpainting, use rsp recipes for style, pacing, and export discipline.",
+    "primaryKeyword": "rsp editing vs ai photo editor",
+    "category": "Guides",
+    "prompt": "Portrait, neutral grade, realistic skin, soft background blur, high detail, 4:5",
+    "variables": ["app strength: likeness | speed | style transfer"],
+    "negativePrompt": "logo, watermark, deformed anatomy",
+    "tools": ["Any mainstream AI photo app", "Lightroom mobile", "CapCut for motion"],
+    "steps": [
+      "List what your app does well (likeness, relight, stylize).",
+      "Map one rsp prompt to that strength—do not fight the model.",
+      "Use post apps for color consistent with our Lightroom-style page.",
+      "Keep video motion separate in CapCut workflow page.",
+      "Compare results at 100% zoom before publishing."
+    ],
+    "faq": [
+      {
+        "q": "Which app is best?",
+        "a": "Depends on likeness and export quality on your phone—test with the same prompt."
+      },
+      {
+        "q": "Do I need multiple subscriptions?",
+        "a": "Not necessarily; many creators use one AI app plus free Lightroom/CapCut tiers."
+      }
+    ],
+    "commonMistakes": [
+      "Switching apps every render instead of tuning prompts.",
+      "Believing marketing pages that promise “official RSP”.",
+      "Ignoring export resolution limits on free tiers."
+    ],
+    "updated": "2026-05-31"
+  }
+]
