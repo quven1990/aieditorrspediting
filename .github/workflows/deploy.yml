@@ -39,6 +39,17 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://aieditorrspediting.xyz
           NEXT_PUBLIC_GA_MEASUREMENT_ID: G-0NQNJQ2R84
 
+      # npm run build already runs append-html-cache-headers.mjs — HTML gets
+      # no-store at edge; /_next/* stays immutable. No CDN purge API needed.
+      - name: Confirm HTML cache headers (prevents stale CSS after deploy)
+        run: |
+          echo "=== out/_headers (shipped with this deploy) ==="
+          wc -l out/_headers
+          echo "HTML routes with CDN-Cache-Control: no-store:"
+          grep -c "CDN-Cache-Control: no-store" out/_headers || true
+          echo "Sample:"
+          head -20 out/_headers
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
