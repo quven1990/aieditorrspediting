@@ -31,14 +31,28 @@ It is **not** a Workers SSR app. Do **not** use OpenNext or `npx wrangler deploy
 
 若你当前是 **Worker + Git** 且改不了 Output directory，建议新建 **Pages** 项目，或断开 Worker 的 Git 构建，改由 Actions 部署。
 
-### 第 2 步：创建 Cloudflare API Token
+### 第 2 步：创建 Cloudflare API Token（必做，解决 code 10000）
 
-1. Cloudflare → 右上角头像 → **My Profile** → **API Tokens**。
-2. **Create Token** → 自定义权限（推荐）：
-   - Account → **Cloudflare Pages** → **Edit**
-   - Zone → **Zone** → **Read**（用于自动解析 zone id）
-   - Zone → **Cache Purge** → **Purge**（部署后清空 CDN 缓存）
-3. 复制生成的 Token（只显示一次）→ 待会填入 GitHub Secret。
+你当前的报错 `Authentication error [code: 10000]` = **Token 没有 Pages 权限**。  
+Dashboard 里「Workers Builds」类 Token **不能**创建/部署 Pages 项目。
+
+1. Cloudflare → 头像 → **My Profile** → **API Tokens** → **Create Token** → **Create Custom Token**。
+2. **Token name**：`github-actions-pages-aieditorrspediting`
+3. **Permissions**（缺一不可）：
+
+| 类型 | 资源 | 权限 |
+|------|------|------|
+| Account | Cloudflare Pages | **Edit** |
+| Account | Account Settings | Read |
+| Zone | Zone | Read |
+| Zone | Cache Purge | Purge |
+
+4. **Account resources**：Include → 选 **Quven2014@gmail.com's Account**（你的账号）。
+5. **Zone resources**：Include → **All zones**（或只选 `aieditorrspediting.xyz`）。
+6. **Continue to summary** → Create → **复制 Token**（只显示一次）。
+7. GitHub → **Settings → Secrets → Actions** → 更新 **`CLOUDFLARE_API_TOKEN`**（覆盖旧 Token）。
+
+不要用「Edit Cloudflare Workers」模板代替；必须显式包含 **Cloudflare Pages → Edit**。
 
 ### 第 3 步：获取 Account ID
 
@@ -102,7 +116,8 @@ DNS 在 Cloudflare _ZONE 里用 Pages 提供的 CNAME 即可。
 
 | 现象 | 处理 |
 |------|------|
-| Actions 报 `Authentication error` | 检查 `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` |
+| `Authentication error [code: 10000]` | 按上文重建 Token，必须有 **Account → Cloudflare Pages → Edit**；更新 GitHub Secret 后 Re-run |
+| Actions 报 `Authentication error` | 检查 `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` 是否同一账号 |
 | `Project not found` | Actions 会自动 `pages project create`；若仍失败，在 Dashboard 手动新建 **Pages** 项目 `aieditorrspediting`（不是 Worker） |
 | `does not support "assets"` | 从 `wrangler.toml` 删除 `[assets]` 段（仅 Worker 用） |
 | `Wrangler requires Node.js v22` | Actions 已用 Node 22；本地部署也需 Node 22+ |

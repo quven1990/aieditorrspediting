@@ -29,6 +29,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify Cloudflare API token (Pages permission)
+        run: |
+          set -euo pipefail
+          echo "Checking API token..."
+          curl -fsS "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" | jq .
+          echo "Checking Pages API access for account ${CLOUDFLARE_ACCOUNT_ID}..."
+          RESP=$(curl -sS "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects" \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")
+          echo "$RESP" | jq .
+          if [ "$(echo "$RESP" | jq -r '.success')" != "true" ]; then
+            echo "::error::Authentication failed for Pages API (code 10000). Recreate CLOUDFLARE_API_TOKEN with Account → Cloudflare Pages → Edit. Workers-only tokens do not work."
+            exit 1
+          fi
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
