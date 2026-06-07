@@ -103,7 +103,7 @@ DNS 在 Cloudflare _ZONE 里用 Pages 提供的 CNAME 即可。
 | 现象 | 处理 |
 |------|------|
 | Actions 报 `Authentication error` | 检查 `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` |
-| `Project not found` | 本地执行一次 `npx wrangler pages project create aieditorrspediting`，或 Dashboard 新建 Pages 项目 |
+| `Project not found` | Actions 会自动 `pages project create`；若仍失败，在 Dashboard 手动新建 **Pages** 项目 `aieditorrspediting`（不是 Worker） |
 | `does not support "assets"` | 从 `wrangler.toml` 删除 `[assets]` 段（仅 Worker 用） |
 | `Wrangler requires Node.js v22` | Actions 已用 Node 22；本地部署也需 Node 22+ |
 | Purge 失败 | Token 需 **Zone Read** + **Cache Purge**；或手动设 `CLOUDFLARE_ZONE_ID` |

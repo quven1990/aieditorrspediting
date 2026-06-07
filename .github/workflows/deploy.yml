@@ -52,6 +52,15 @@ jobs:
           grep -c "CDN-Cache-Control: no-store" out/_headers || true
           head -20 out/_headers
 
+      - name: Ensure Cloudflare Pages project exists
+        run: |
+          if npx wrangler pages project list 2>/dev/null | grep -qw "aieditorrspediting"; then
+            echo "Pages project aieditorrspediting already exists"
+          else
+            echo "Creating Pages project aieditorrspediting..."
+            npx wrangler pages project create aieditorrspediting --production-branch=main
+          fi
+
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy out --project-name=aieditorrspediting --branch=main
 
