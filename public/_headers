@@ -1,17 +1,10 @@
-# Default: do not cache HTML at browser or Cloudflare edge.
-# After each deploy, CSS/JS filenames change; stale HTML → 404 on old /_next/static/* assets.
+# Security headers for all responses.
 /*
-  Cache-Control: no-cache, must-revalidate
-  CDN-Cache-Control: no-store
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
-# Hashed build assets — safe to cache forever (filename changes every build).
-/_next/static/*
-  Cache-Control: public, max-age=31536000, immutable
-  CDN-Cache-Control: max-age=31536000
-
+# Hashed Next.js assets — long cache (filenames change every build).
 /_next/*
   Cache-Control: public, max-age=31536000, immutable
   CDN-Cache-Control: max-age=31536000
