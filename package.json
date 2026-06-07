@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-sitemap.mjs && next build",
+    "build": "node scripts/generate-sitemap.mjs && next build && node scripts/verify-static-assets.mjs",
     "deploy": "wrangler pages deploy out --project-name=aieditorrspediting",
     "start": "next start",
     "lint": "next lint"

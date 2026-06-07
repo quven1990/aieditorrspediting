@@ -81,6 +81,20 @@ Wrangler was run without static assets config. Use **Deploy command** = `npm run
 - [ ] Copy button works (HTTPS)
 - [ ] `/robots.txt` and `/sitemap.xml` return 200
 - [ ] Footer links: Privacy, Terms, Safe Use
+- [ ] **Styles load** — DevTools → Network: `/_next/static/css/*.css` returns **200** (not 404)
+
+### If CSS looks broken right after a deploy
+
+**Cause:** Each build renames hashed files under `/_next/static/`. Cached **HTML** can still point at the previous CSS hash (e.g. `cda6942….css`), which 404s after the new deploy.
+
+**Fix (already in repo):** `public/_headers` sets:
+
+- `/*` → `Cache-Control: no-cache` + `CDN-Cache-Control: no-store` (HTML always fresh at Cloudflare edge)
+- `/_next/static/*` → `immutable` long cache (safe because filenames are content-hashed)
+
+After changing `_headers`, redeploy once. If a page still looks unstyled, hard-refresh (Cmd+Shift+R) or purge Cloudflare cache: **Caching** → **Configuration** → **Purge Everything** (one-time).
+
+**Do not** enable “Cache Everything” page rules for `aieditorrspediting.xyz` — it will cache HTML and recreate this bug.
 
 ## Local verify before push
 
