@@ -34,9 +34,10 @@ It is **not** a Workers SSR app. Do **not** use OpenNext or `npx wrangler deploy
 ### 第 2 步：创建 Cloudflare API Token
 
 1. Cloudflare → 右上角头像 → **My Profile** → **API Tokens**。
-2. **Create Token** → 模板选 **Edit Cloudflare Workers**（含 Pages 部署权限），或自定义：
+2. **Create Token** → 自定义权限（推荐）：
    - Account → **Cloudflare Pages** → **Edit**
-   - Account → **Account Settings** → **Read**（可选）
+   - Zone → **Zone** → **Read**（用于自动解析 zone id）
+   - Zone → **Cache Purge** → **Purge**（部署后清空 CDN 缓存）
 3. 复制生成的 Token（只显示一次）→ 待会填入 GitHub Secret。
 
 ### 第 3 步：获取 Account ID
@@ -56,8 +57,11 @@ It is **not** a Workers SSR app. Do **not** use OpenNext or `npx wrangler deploy
 |-------------|-----|
 | `CLOUDFLARE_API_TOKEN` | 第 2 步的 API Token |
 | `CLOUDFLARE_ACCOUNT_ID` | 第 3 步的 Account ID |
+| `CLOUDFLARE_ZONE_ID` | （可选）域名 zone id；不填则 Actions 用 API 按 `aieditorrspediting.xyz` 自动解析 |
 
 （可选）若 GA ID 变更，改 `.github/workflows/deploy.yml` 里的 `NEXT_PUBLIC_GA_MEASUREMENT_ID`。
+
+Actions 使用 **Node 22** + 项目内 `wrangler`（`pages deploy`）。`wrangler.toml` **不要**写 `[assets]`（那是 Worker 配置，会导致 Pages 部署失败）。
 
 ### 第 5 步：关闭 Cloudflare 侧的自动 Git 构建（避免双部署）
 
@@ -74,7 +78,7 @@ It is **not** a Workers SSR app. Do **not** use OpenNext or `npx wrangler deploy
 仓库内已有 `.github/workflows/deploy.yml`。推送到 `main` 后：
 
 1. GitHub → **Actions** → 工作流 **Deploy to Cloudflare Pages**。
-2. 应看到：Checkout → `npm ci` → `npm run build` → `pages deploy out`。
+2. 应看到：Checkout → `npm ci` → `npm run build` → `pages deploy out` → **Purge Cloudflare CDN cache**。
 3. 构建日志末尾应有：
    - `verify-static-assets: OK (... HTML files checked)`
    - `append-html-cache-headers: ... HTML routes`
@@ -100,6 +104,9 @@ DNS 在 Cloudflare _ZONE 里用 Pages 提供的 CNAME 即可。
 |------|------|
 | Actions 报 `Authentication error` | 检查 `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` |
 | `Project not found` | 本地执行一次 `npx wrangler pages project create aieditorrspediting`，或 Dashboard 新建 Pages 项目 |
+| `does not support "assets"` | 从 `wrangler.toml` 删除 `[assets]` 段（仅 Worker 用） |
+| `Wrangler requires Node.js v22` | Actions 已用 Node 22；本地部署也需 Node 22+ |
+| Purge 失败 | Token 需 **Zone Read** + **Cache Purge**；或手动设 `CLOUDFLARE_ZONE_ID` |
 | 仍走 `npx wrangler deploy` | 关掉 Cloudflare Git 的 Worker 构建，只用 Actions 里的 `pages deploy out` |
 | GitHub 红字 / fetch org failed | Cloudflare 里重连 GitHub App；Actions 部署**不依赖** Cloudflare 读 GitHub，只依赖你 push 到 GitHub |
 

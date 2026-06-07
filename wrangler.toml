@@ -1,10 +1,8 @@
 # Static Next.js export → folder ./out (NOT OpenNext / Workers SSR).
 # Build: npm run build
-# Deploy (Pages): npm run deploy
+# Deploy (Pages): npm run deploy  OR  wrangler pages deploy out ...
 name = "aieditorrspediting"
 compatibility_date = "2024-12-01"
 pages_build_output_dir = "out"
 
-# Required when CI runs `npx wrangler deploy` (static assets only)
-[assets]
-directory = "./out"
+# Do NOT add [assets] here — that is for Workers, not Pages (breaks pages deploy).
