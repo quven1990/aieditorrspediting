@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -8,6 +8,7 @@ const SITE_URL = (
 ).replace(/\/$/, "");
 
 const today = new Date().toISOString().slice(0, 10);
+const SITEMAP_FILE = "sitemap_index.xml";
 
 const prompts = JSON.parse(
   readFileSync(join(root, "src/content/prompts.json"), "utf8"),
@@ -49,6 +50,12 @@ ${urls
 </urlset>
 `;
 
-const outPath = join(root, "public/sitemap.xml");
+const outPath = join(root, "public", SITEMAP_FILE);
+const legacyPath = join(root, "public/sitemap.xml");
+try {
+  unlinkSync(legacyPath);
+} catch {
+  // ignore if absent
+}
 writeFileSync(outPath, xml, "utf8");
-console.log(`Wrote ${urls.length} URLs to public/sitemap.xml`);
+console.log(`Wrote ${urls.length} URLs to public/${SITEMAP_FILE}`);

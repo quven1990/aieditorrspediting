@@ -17,3 +17,6 @@ export const SITE_OPERATOR = "aieditorrspediting.xyz";
 export const CONTACT_EMAIL = "contract@aieditorrspediting.xyz";
 
 export const PRIVACY_EMAIL = "privacy@aieditorrspediting.xyz";
+
+/** Bing IndexNow key — verification file at /{key}.txt */
+export const INDEXNOW_KEY = "c17fe838b04349c4ac14070d1d38bd10";

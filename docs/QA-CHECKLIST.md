@@ -8,7 +8,7 @@ Per `student-site-qa-acceptance` skill (simplified).
 - [ ] No broken internal links (footer, hub, prompt cards)
 - [ ] Disclaimer visible on home + prompt pages
 - [ ] No APK / mod / “official RSP” claims
-- [ ] sitemap.xml lists all prompt slugs
+- [ ] sitemap_index.xml lists all prompt slugs
 - [ ] Mobile readable (375px width)
 
 ## P1 (first week)

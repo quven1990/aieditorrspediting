@@ -1,3 +1,5 @@
-# Trailing-slash mistake (Next uses trailingSlash for pages, not for sitemap.xml)
-/sitemap.xml/ /sitemap.xml 301
+# Legacy sitemap name + trailing-slash fixes
+/sitemap.xml /sitemap_index.xml 301
+/sitemap.xml/ /sitemap_index.xml 301
+/sitemap_index.xml/ /sitemap_index.xml 301
 /robots.txt/ /robots.txt 301

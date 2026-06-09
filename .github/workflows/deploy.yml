@@ -106,3 +106,9 @@ jobs:
             exit 1
           fi
           echo "✅ Purge Everything completed"
+
+      - name: Submit URLs to IndexNow (Bing)
+        run: node scripts/submit-indexnow.mjs
+        env:
+          NEXT_PUBLIC_SITE_URL: https://aieditorrspediting.xyz
+          INDEXNOW_KEY: c17fe838b04349c4ac14070d1d38bd10

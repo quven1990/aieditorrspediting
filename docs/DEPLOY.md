@@ -110,7 +110,7 @@ DNS 在 Cloudflare _ZONE 里用 Pages 提供的 CNAME 即可。
 - [ ] Actions 为绿色 ✅  
 - [ ] https://aieditorrspediting.xyz/ 样式正常  
 - [ ] Network：`/_next/static/css/*.css` → **200**  
-- [ ] `/sitemap.xml`、`/robots.txt` → **200**
+- [ ] `/sitemap_index.xml`、`/robots.txt` → **200**
 
 ### 常见问题
 
@@ -189,7 +189,7 @@ Wrangler was run without static assets config. Use **Deploy command** = `npm run
 
 1. Property: `https://aieditorrspediting.xyz`
 2. Verify (DNS TXT in Cloudflare is easiest).
-3. Submit sitemap: `sitemap.xml`（资源请用 **https://aieditorrspediting.xyz**，不要用 www）  
+3. Submit sitemap: `sitemap_index.xml`（资源请用 **https://aieditorrspediting.xyz**，不要用 www）  
    详见 [SEO-GSC.md](./SEO-GSC.md) 若抓取失败。
 
 ## GA4
@@ -201,7 +201,7 @@ Wrangler was run without static assets config. Use **Deploy command** = `npm run
 
 - [ ] Home + `/prompts/` + one prompt page load on mobile
 - [ ] Copy button works (HTTPS)
-- [ ] `/robots.txt` and `/sitemap.xml` return 200
+- [ ] `/robots.txt` and `/sitemap_index.xml` return 200
 - [ ] Footer links: Privacy, Terms, Safe Use
 - [ ] **Styles load** — DevTools → Network: `/_next/static/css/*.css` returns **200** (not 404)
 
